@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+	    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+	<title>SJSU Library</title>
+
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height initial-scale=1"> 
+   
+   
+  <link rel=stylesheet href="css/jquery.mobile-1.4.2.css" />
+  <link rel=stylesheet href="css/core.css" />
+  <link rel=stylesheet href="css/index.css" />
+  <link rel=stylesheet href="css/jquery.mobile-1.4.2.css" />
+  <link rel=stylesheet href="css/jquery.mobile.icons.min.css" />
+  <link rel=stylesheet href="css/SJSULibraryApp.css" />
+  <link rel=stylesheet href="css/SJSULibraryApp.min.css" />
+  
+  <!-- Google Api V3 Declaration -->    
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+  <!-- End of Google Api V3 Declaration -->  
+
+</head>
+
+<body onload="showFloor(1);initializeSlider();">
+
+<!--Home-->    
+  <div data-role="page" data-theme="b" id="home">
+	 
+    <div data-role="header" id="header">
+      <h1>SJSU Library</h1>
+      <input type="string" data-type="range" data-theme="a" name="slider-2" id="slider-main" data-highlight="true" min="10" max="19" value="12" class="ui-shadow-inset ui-body-inherit ui-corner-all ui-slider-input">
+    </div>
+        
+    <div data-role="content">
+		  <div id="map-canvas">
+      </div>
+    </div>
+    
+    <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
+        <div class="ui-grid-d center" data-role="navbar">
+		      <div class="ui-grid-d center" data-role="navbar">
+            <ul>
+                <li><a href="#findBooks" class="ui-btn">Find Books</a>
+                </li>
+                <li><a href="#findRoomByNumber" class="ui-btn">Find Rooms</a>
+                </li>
+            </ul>
+          </div>
+
+            <ul>
+                <li><a href="#mainMenu" data-icon="bars">Menu</a>
+                </li>
+                <li><a href="#win1" data-icon="calendar">Events</a>
+                </li>
+                <li><a href="#home" data-icon="home">Home</a>
+                </li>
+                <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+                </li>
+            </ul>
+
+        </div>
+   </div>
+  </div>
+
+<!--Rooms-->
+  <div data-role="page" id="Rooms" data-theme="a" data-url="two">
+
+	 <div data-role="header">
+	   <a href="#home" data-icon="back">Back</a>
+		  <h1>Main Menu</h1>
+	 </div><!-- /header -->
+
+   <div data-role="content">	
+     <div role="main" class="ui-content">
+      <ul data-role="listview" data-theme="b" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+        <li class="ui-first-child">
+          <a href="#Rooms" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Rooms</a>
+        </li>
+        <li><a href="#circulationDesk" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Circulation Desk</a>
+        </li>
+        <li><a href="#referenceDesk" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Reference Desk</a>
+        </li>
+        <li><a href="#Restrooms" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Restrooms</a>
+        </li>
+        <li><a href="#elevators" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Elevators</a>
+        </li>
+      </ul>
+    </div>
+  </div><!-- /content -->
+  
+  <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
+    <div class="ui-grid-d center" data-role="navbar">
+      <ul>
+        <li><a href="#mainMenu" data-icon="bars">Menu</a>
+        </li>
+        <li><a href="#win1" data-icon="calendar">Events</a>
+        </li>
+        <li><a href="#home" data-icon="home">Home</a>
+        </li>
+        <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+        </li>
+      </ul>
+    </div>	
+  </div>
+
+  </div>
+
+<!--mainMenu-->
+  <div data-role="page" id="mainMenu" data-theme="b" data-url="two">
+
+  	<div data-role="header">
+  	 <a href="#home" data-icon="back">Back</a>
+  		<h1>Main Menu</h1>
+  	</div>
+
+	   <div data-role="content">	
+	     <div data-role="collapsibleset" class="ui-collapsible-set ui-group-theme-a ui-corner-all data-theme-a">
+				
+        <div data-role="collapsible">
+          <h3>Find Rooms</h3>
+          <p>Find study rooms, classrooms and meeting rooms in the SJSU Library.</p>
+          <ul data-role="listview" data-theme="a" data-id="findRoombyNumber" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+        
+        <li class="ui-first-child ui-last-child">
+        <a href="#home" onclick="javascript:clearMap();RoomByNumber('L02');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L02</a></li>
+        
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L04');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L04</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L67');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L67</a></li>
+        
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('125');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">125</a></li>
+
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('213');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">213</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('217');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">217</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('219');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">219</a></li>
+
+
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('224');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">224</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('226');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">226</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('322');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">322</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('324');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">324</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('326');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">326</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('390');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">390</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('392');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">392</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('602');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">602</a></li>
+        
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('604');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">604</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('606');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">606</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('622');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">622</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('624');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">624</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('626');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">626</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('632');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">632</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('634');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">634</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('662');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">662</a></li>
+        
+        
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('664');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">664</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('702');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">702</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('704');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">704</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('706');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">706</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('722');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">722</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('724');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">724</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('726');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">726</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('732');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">732</a></li>
+        
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('734');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">734</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('762');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">762</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('764');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">764</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('802');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">802</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('804');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">804</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('806');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">806</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('822');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">822</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('824');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">824</a></li>
+        
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('826');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">826</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('832');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">832</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('834');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">834</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('862');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">862</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('864');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">864</a></li>
+
+      </ul>
+        </div>
+				
+        <div data-role="collapsible">
+          <h3>Circulation Desk</h3>
+          <p>The Circulation Desk staff provide assistance with materials checkout, course reserves, library accounts, Link+ and ILL holds, and paying fines. </p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            <li><a href="#home" onclick="javascript:clearMap();showCirculationDesk(1);" class="ui-btn ui-icon-carat-r">1st Floor</a></li>
+          </ul>
+        </div>
+				
+        <div data-role="collapsible">
+          <h3>Reference Desk</h3>
+          <p>The Reference Desk offers help with library collections and research assistance with assignments.</p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            <li class="ui-first-child">
+                <a href="#home" onclick="javascript:clearMap();showReferenceDesk(2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a>
+            </li>
+            <li class="ui-last-child">
+                <a href="#home" onclick="javascript:clearMap();showReferenceDesk(3);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
+          </ul>
+        </div>
+				
+        <div data-role="collapsible">
+          <h3>Restrooms</h3>
+          <p>Restrooms are located on each floor of the library.</p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+            <li class="ui-first-child">
+            <a href="#home" onclick="javascript:clearMap();showRestrooms(0);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showRestrooms(1);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">1st Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showRestrooms(2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showRestrooms(3);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showRestrooms(4);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">4th Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showRestrooms(5);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">5th Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showRestrooms(6);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">6th Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showRestrooms(7);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">7th Floor</a></li>
+            <li class="ui-last-child">
+            <a href="#home" onclick="javascript:clearMap();showRestrooms(8);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">8th Floor</a></li>
+          </ul> 
+        </div>
+				
+        <div data-role="collapsible">
+          <h3>Elevators</h3>
+          <p>Find the elevators on the library map.</p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+            <li class="ui-first-child">
+            <a href="#home" onclick="javascript:clearMap();showElevators(0);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showElevators(1);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">1st Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showElevators('m');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">M Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showElevators(2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showElevators(3);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showElevators(4);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">4th Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showElevators(5);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">5th Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showElevators(6);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">6th Floor</a></li>
+            <li><a href="#home" onclick="javascript:clearMap();showElevators(7);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">7th Floor</a></li>
+            <li class="ui-last-child">
+            <a href="#home" onclick="javascript:clearMap();showElevators(8);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">8th Floor</a></li>
+          </ul>
+        </div>
+        
+        <div data-role="collapsible">
+          <h3>Printing</h3>
+          <p>You can print from any library computer, USB, or laptop. Printing stations can be found on the lower level, 1st floor, 2nd floor, and 5th floor.</p>
+
+        </div>
+        
+        <div data-role="collapsible">
+          <h3>Mezzanine</h3>
+          <p>The Mezzanine is an SJSU student-only space for collaborating, studying, or just relaxing between classes. It is located between the lower level and 1st floor.</p>
+        </div>
+        
+        <div data-role="collapsible">
+          <h3>Laptops and iPads</h3>
+          <p>Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card on the Mezzanine and 4th floor.</p>
+          <a href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Laptops and iPads (Website)</a>
+        </div>
+        
+        <div data-role="collapsible">
+          <h3>Student Computing Services</h3>
+          <p>Student Computing Services provides students free access to PC laptops, MacBooks and iPads. They are located on the 4th floor.</p>
+          <a href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Student Computing Services (website)</a>
+        </div>
+        
+        <div data-role="collapsible">
+          <h3>Library Cards</h3>
+          <p>A library card and PIN are needed to borrow items or get access to ebooks and databases. Bring your Tower Card to the Circulation Desk to get a library card.</p>
+          <p><a href="http://library.sjsu.edu/get-library-card/get-library-card-0" class="ui-btn-ui-icon-carat-r">More information on the SJSU Library Website</a></p>
+          <a href="#home" onclick="javascript:clearMap();showCirculationDesk(1);" class="ui-btn ui-icon-carat-r">Get help at the Circulation Desk. 1st Floor.</a>
+
+        </div>
+
+        <div data-role="collapsible">
+            <h3>Library FAQ</h3>
+            <p>Are you looking for something not in this list? Try the Frequently Asked Questions on the library website. You can also email new questions.</p>
+            <a href="http://answers.sjlibrary.org/" class="ui-btn ui-mini ui-btn-inline ui-corner-all">SJSU Library Website FAQ</a>
+          </div>
+
+          <div data-role="collapsible">
+            <h3>24 Hour Live Reference Chat</h3>
+            <p>Use the 24/7 Chat service to get help with questions or research.</p>
+            <a href="http://library.sjsu.edu/ask-librarian/ask-librarian" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find on SJSU Library Website</a>
+          </div>
+
+          <div data-role="collapsible">
+            <h3>Research Guides by Subject</h3>
+            <p>Research Guides list books, databases and online tools for all departments and many individual courses.</p>
+
+            <a href="http://libguides.sjsu.edu/index" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More information on SJSU Library Website</a>
+          </div>
+
+          <div data-role="collapsible">
+            <h3>Find a Librarian</h3>
+            <p>There is a librarian for every subject offered at SJSU. </p>
+            <a href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons"class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
+          </div>
+
+          <div data-role="collapsible">
+            <h3>Student Technology Training</h3>
+            <p> The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>
+
+
+            <a href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all"> More information on SJSU Library Website</a>
+          </div>
+   
+      </div> 
+      
+      <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
+        <div class="ui-grid-d center" data-role="navbar">
+          <ul>
+            <li><a href="#mainMenu" data-icon="bars">Menu</a>
+            </li>
+            <li><a href="#win1" data-icon="calendar">Events</a>
+            </li>
+            <li><a href="#home" data-icon="home">Home</a>
+            </li>
+            <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>	
+	</div><!-- /content -->
+
+  </div><!--/mainMenu-->
+
+<!--Rooms by number-->
+  <div data-role="page" id="findRoomByNumber" data-theme="b" data-url="two">
+
+	<div data-role="header">
+	 <a href="#home" data-icon="back">Back</a>
+	 <h1>Find Rooms by Room Number</h1>
+	</div>
+
+	<div data-role="content">	
+	 <ul data-role="listview" data-theme="a" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+				
+				<li class="ui-first-child ui-last-child">
+				<a href="#home" onclick="javascript:clearMap();RoomByNumber('L02');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L02</a></li>
+				
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L04');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L04</a></li>
+				
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L67');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L67</a></li>
+				
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('125');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">125</a></li>
+
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('213');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">213</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('217');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">217</a></li>
+        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('219');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">219</a></li>
+
+
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('224');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">224</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('226');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">226</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('322');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">322</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('324');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">324</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('326');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">326</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('390');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">390</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('392');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">392</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('602');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">602</a></li>
+				
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('604');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">604</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('606');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">606</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('622');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">622</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('624');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">624</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('626');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">626</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('632');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">632</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('634');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">634</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('662');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">662</a></li>
+				
+				
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('664');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">664</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('702');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">702</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('704');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">704</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('706');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">706</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('722');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">722</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('724');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">724</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('726');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">726</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('732');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">732</a></li>
+				
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('734');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">734</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('762');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">762</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('764');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">764</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('802');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">802</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('804');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">804</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('806');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">806</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('822');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">822</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('824');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">824</a></li>
+				
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('826');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">826</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('832');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">832</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('834');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">834</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('862');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">862</a></li>
+				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('864');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">864</a></li>
+
+			</ul>
+			
+	</div><!-- /content -->
+  
+  <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
+    <div class="ui-grid-d center" data-role="navbar">
+      <ul>
+        <li><a href="#mainMenu" data-icon="bars">Menu</a>
+        </li>
+        <li><a href="#win1" data-icon="calendar">Events</a>
+        </li>
+        <li><a href="#home" data-icon="home">Home</a>
+        </li>
+        <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+        </li>
+      </ul>
+    </div>
+	</div>
+
+  </div><!--Rooms by number-->
+
+<!--Rooms-->
+  <div data-role="page" id="Rooms" data-theme="b" data-url="two">
+
+	<div data-role="header">
+	 <a href="#mainMenu" data-icon="back">Back</a>
+	 <h1>Rooms by Floor</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	   <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+  			<li class="ui-first-child">
+  				<a href="#home" onclick="javascript:clearMap();showRooms(0);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a>
+        </li>
+  			<li><a href="#home" onclick="javascript:clearMap();showRooms(2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a>
+        </li>
+  			<li><a href="#home" onclick="javascript:clearMap();showRooms(3);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a>
+        </li>
+  			<li><a href="#home" onclick="javascript:clearMap();showRooms(6);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">6th Floor</a>
+        </li>
+  			<li><a href="#home" onclick="javascript:clearMap();showRooms(7);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">7th Floor</a>
+        </li>	
+  			<li class="ui-last-child">
+  			<a href="#home" onclick="javascript:clearMap();showRooms(8);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">8th Floor</a>
+        </li>
+		</ul>
+	</div><!-- /content -->
+  
+    <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
+        <div class="ui-grid-d center" data-role="navbar">
+          <ul>
+            <li><a href="#mainMenu" data-icon="bars">Menu</a>
+            </li>
+            <li><a href="#win1" data-icon="calendar">Events</a>
+            </li>
+            <li><a href="#home" data-icon="home">Home</a>
+            </li>
+            <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+            </li>
+          </ul>
+        </div>
+		</div>
+  </div>
+
+<!--Events-->
+  <div data-role=page id="win1" data-theme="b" data-url="two">
+  
+  <a href="#win1" data-icon="back">Back</a>
+
+  <div data-role="header">
+            <h1>SJSU Library</h1>
+  </div>
+
+  
+  <div data-role=content>
+    <div id="jMonthCalendar" style="display:none; width:100%">
+    </div>
+    <div id="evtsTable">
+      Library Events
+    </div>
+  </div>
+  
+  <div data-role=button id="toggleEvtsVw" class="table">
+    Show calendar view
+  </div>
+  
+  <div data-role=popup id='calPopup' data-position-to="origin" class="ui-content">
+  </div>
+      
+    <div data-role="footer" data-id="foo1" data-position="fixed">
+      <div class="ui-grid-d center" data-role="navbar">
+        <ul>
+          <li><a href="#mainMenu" data-icon="bars">Menu</a>
+          </li>
+          <li><a href="#win1" data-icon="calendar">Events</a>
+          </li>
+          <li><a href="#home" data-icon="home">Home</a>
+          </li>
+          <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+  </div>
+
+<!--Events-->
+    <div data-role=page id="win2" data-add-back-btn="true">
+  <div data-role="header">
+    <h1>Events</h1>
+    <div id="temptest">
+    </div>
+  </div>
+
+  <div data-role=content>
+    <p> Events</p>
+  </div>
+
+    </div><!--/win2-->
+
+
+<!--Find Books-->
+    <div data-role="page" id="findBooks" data-theme="b" data-url="two">
+
+    <div data-role="header">
+        <a href="#home" data-icon="back">Back</a>
+
+        <h1>Main Menu</h1>
+    </div>
+    <!-- /header -->
+
+    <div data-role="content">
+        <div role="main" class="ui-content">
+                <label>Find Books:</label>
+                <ul data-role="listview" data-theme="a" data-filter="true"  data-filter-reveal="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis A - BL');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis A - BL</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis BM');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis BM</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis CJ - DT');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis CJ - DT</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis E - HB');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis E - HB</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis HC - HM');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis HC - HM</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis HC - HM');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis HC - HM</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis HQ - JN');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis HQ - JN</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis JQ');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis JQ</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis LB');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis LB</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis PA - PR');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis PA - PR</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis PR - PZ');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis PR - PZ</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis QD');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis QD</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis R - S');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis R - S</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis TK - Z');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis TK - Z</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Folio N');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Folio N</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Folio G');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Folio G</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Folio F');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Folio F</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Folio A');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Folio A</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Fiction');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Fiction</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Non-fiction');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Non-Fiction</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('J Fiction');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">J Fiction</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Ethnic Studies');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Ethnic Studies</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('A - JA');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">A - JA</a></li>
+                    <li><a href="#home" onclick="javascript:clearMap();showLocation('JA - Z');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">JA - Z</a></li></ul>
+                <div id="notFound" style="display:none">
+                    <p>The call number was not found.</p>
+                </div>
+            <p>Ex. Thesis A, Folio F</p>
+
+            <p>Don't have a call number?</p>
+            <a href="http://catalog.sjlibrary.org/search/" data-role="button">Search the SJSU Catalog</a>
+        </div>
+
+    </div>
+    <!-- /content -->
+    
+    <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
+      <div class="ui-grid-d center" data-role="navbar">
+        <ul>
+          <li><a href="#mainMenu" data-icon="bars">Menu</a>
+          </li>
+          <li><a href="#win1" data-icon="calendar">Events</a>
+          </li>
+          <li><a href="#home" data-icon="home">Home</a>
+          </li>
+          <li><a href="http://library.sjsu.edu" data-icon="action">SJSU ibrary Website</a>
+          </li>
+        </ul>
+      </div>
+    </div>   
+    
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.js"></script>
+    <script src="js/bookNumberIndex.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jMonthCalendar.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/maps.js"></script>
+
+  </body>
+
+</html>
