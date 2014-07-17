@@ -8,6 +8,10 @@
   var markers = [];
   var imageBounds = new google.maps.LatLngBounds(new google.maps.LatLng(37.334847, -121.886208),new google.maps.LatLng(37.336027, -121.883861)  );
   var mlkLibraryGPSCoord = new google.maps.LatLng(37.335438, -121.885036);
+
+
+
+/*
   allMainPageItems = [
   
   //ll
@@ -318,6 +322,11 @@
         '</div>'}
   ]}
   ];
+
+  */
+
+
+
   function initialize() {
   /*top : 37.336030, -121.885133 ... max first, 
   left : 37.335486, -121.886340 ... 
@@ -518,28 +527,55 @@
   	  	  lastFloor = ''+floorNumber;
   	  floorNumber++;
   	  }
-  try{	      
-  		  for(var i = 0; i < allMainPageItems[floorNumber].children.length; i++) {
-  		  
-  		  var marker =     new google.maps.Marker({animation: google.maps.Animation.DROP,
-  		  position : new google.maps.LatLng(allMainPageItems[floorNumber].children[i].x, allMainPageItems[floorNumber].children[i].y),
-  		  title : "marker",
-  		  map: map,
-  		  draggable: false
-  		  });
-  		  marker['infoWindow'] = new google.maps.InfoWindow({
-  		  content: allMainPageItems[floorNumber].children[i].contentString,
-  		  maxWidth: 200
-  		  });
-  		  google.maps.event.addListener(marker, 'click', function() {
-  		  try {
-  		  for(var b = 0; b < markers.length; b++) {
-  		  var currentMarker = markers[i];
-  		  currentMarker["infoWindow"].close();
-  		  }} catch(e){}
-  			this['infoWindow'].open(map,this);
-  			});
-  		markers.push(marker);
+  try{
+      // To keep above code from needing to be redone, we'll adjust from the lower level of 0 to a lower level of -1
+      floorNumber = floorNumber - 1;	 
+
+      var i, iMax, contentString;
+      for (i = 0, iMax = locations.length; i < iMax; i++) {
+  		  if (locations[i].floor === floorNumber) {
+          
+          contentString = '<div id="content">';
+          if (locations[i].name) {
+            contentString += locations[i].name;
+          }
+          if (locations[i].image) {
+            contentString += "<img src='" + locations[i].image + "' height='100' width='100' align='left'>";
+          }
+          if (locations[i].desc) {
+            contentString += "<p>" + locations[i].desc + "</p>";
+          }
+          if (locations[i].linkText && locations[i].linkTarget) {
+            contentString += "<p><a href='" + locations[i].linkTarget + "'>" + locations[i].linkText + "</a></p>";
+          }
+          contentString += '</div>';
+
+        
+    		  var marker = new google.maps.Marker(
+            {
+              animation: google.maps.Animation.DROP,
+        		  position : new google.maps.LatLng(locations[i].x, locations[i].y),
+        		  title : "marker",
+        		  map: map,
+        		  draggable: false
+    		    }
+          );
+
+    		  marker['infoWindow'] = new google.maps.InfoWindow({
+    		    content: contentString,
+    		    maxWidth: 200
+    		  });
+    		  google.maps.event.addListener(marker, 'click', function() {
+      		  try {
+        		  for(var b = 0; b < markers.length; b++) {
+        		  var currentMarker = markers[i];
+        		  currentMarker["infoWindow"].close();
+        		  }
+            } catch(e){}
+      			this['infoWindow'].open(map,this);
+    			});
+    		markers.push(marker);
+        }
   		}
   }catch(e){console.log(e);}
   }catch(e){console.log(e);}
