@@ -9,324 +9,6 @@
   var imageBounds = new google.maps.LatLngBounds(new google.maps.LatLng(37.334847, -121.886208),new google.maps.LatLng(37.336027, -121.883861)  );
   var mlkLibraryGPSCoord = new google.maps.LatLng(37.335438, -121.885036);
 
-
-
-/*
-  allMainPageItems = [
-  
-  //ll
-  {children: [{x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-  {x: "37.335462", y: "-121.885356", 
-  	contentString:'<div id="content">'+
-        "Restrooms"+
-        '</div>'},
-  {x: "37.335431", y: "-121.884799", 
-  	contentString:'<div id="content">'+
-        'SJSU Spartan Collaboration Study Room L67'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a>" +
-        '</div>'},
-  {x: "37.335776", y: "-121.885040", 
-  	contentString:'<div id="content">'+
-        '</div>'},
-  {x: "37.335776", y: "-121.885040", 
-  	contentString:'<div id="content">'+
-        'Study Room L02'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  {x: "37.335801", y: "-121.885079", 
-  	contentString:'<div id="content">'+
-        'Study Room L04'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  {x:"37.335518", y: "-121.885094",
-    contentString:'<div id="content">'+
-      'Printing'+
-      "<div><img src='images/photos/Printing-small.jpg' height='100' width='100' align='left'>" +
-      "<p> You can print from any library computer, USB, or laptop.</p>" +
-      '</div>'}
-  ]},
-  
-  //M
-  {children: [{x: "37.335712", y: "-121.885180", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-    {x: "37.335750", y: "-121.885224", 
-      contentString:'<div id="bodyContent">'+
-        'Printing'+
-        "<div><img src='images/photos/Printing-small.jpg' height='100' width='100' align='left'>" +
-        "<p> You can print from any library computer, USB, or laptop.</p>" +
-        '</div>'},
-    {x: "37.335648", y: "-121.885165", 
-      contentString:'<div id="bodyContent">'+
-      "<div><img src='images/photos/Mezzanine-small.jpg' height='100' width='100' align='left'>" +
-        'Mezzanine'+
-        '</div>'},
-    {x:"37.335646", y:"-121.885103",
-      contentString:'<div id="bodyContent">'+
-        "Laptops and iPads"+
-        "<img src='images/photos/LaptopsandiPads-small.jpg' height='100' width='100' align='left'>" +
-        "<p>Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.</p>" +
-        '</div>'}
-
-  ]},
-  
-    //1st
-  {children: [{x: "37.335360", y: "-121.885028", 	
-  contentString:'<div id="content">' +
-                  '<div><h2 id="firstHeading">Circulation Desk</h2>' +
-                  '<div id="bodyContent">' +
-                  "<div><img src='images/photos/CircDesk-small.jpg' height='100' width='100' align='left'>" +
-                  '<p>Check out materials or get help with your library account.</p></div>' +
-                  '</div>' +
-                  '</div>'},
-  {x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-  {x: "37.335462", y: "-121.885350", 
-  	contentString:'<div id="content">'+
-        "Restrooms (1 of 3)"+
-        '</div>'},
-  {x: "37.335775", y: "-121.884975", 
-  	contentString:'<div id="content">'+
-        "Restrooms (2 of 3)"+
-        '</div>'},
-  {x: "37.335480", y: "-121.884662", 
-  	contentString:'<div id="content">'+
-        "Restrooms (3 of 3)"+
-        '</div>'},
-  {x: "37.335567", y:"-121.885102",
-      contentString:'<div id="bodyContent">'+
-        'Printing'+
-        "<div><img src='images/photos/Printing-small.jpg' height='100' width='100' align='left'>" +
-        "<p> You can print from any library computer, USB, or laptop.</p>" +
-        '</div>'},
-  {x: "37.335410", y:"-121.884567",
-      contentString: '<div id="content">'+
-      "Classroom 125" +
-      '</div>'}
-  ]},
-  
-  //2nd
-  {children: [{x: "37.335538", y: "-121.885172", 	
-  contentString:'<div id="content">' +
-                                 '<div><h2 id="firstHeading">Reference Desk</h2>' +
-                                 '</div>' +
-                                 '<div id="content">' +
-                                 "<div><img src='images/photos/RefDesk-small.jpg' height='100' width='100' align='left'>" +
-                                 '<p>Get help with your research needs.</p></div>' +
-                                 '</div>' +
-                                 '</div>'},
-  {x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-  {x: "37.335486", y: "-121.884657", 
-  	contentString:'<div id="content">'+
-        "Restrooms (1 of 2)"+
-        '</div>'},
-  {x: "37.335462", y: "-121.885354", 
-  	contentString:'<div id="content">'+
-        "Restrooms (2 of 2)"+
-        '</div>'},
-  {x: "37.335713", y: "-121.885141", 
-  	contentString:'<div id="content">'+
-        'Study Room 226'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  {x: "37.335684", y: "-121.885109",
-  	contentString:'<div id="content">'+
-        'Study Room 224'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  {x: "37.335506", y:"-121.885252",
-    contentString: '<div id="content">'+
-        'Printing'+
-        "<div><img src='images/photos/Printing-small.jpg' height='100' width='100' align='left'>" +
-        "<p> You can print from any library computer, USB, or laptop.</p>" +
-        '</div>' +
-        '</div>'},
-  {x: "37.335410", y: "-121.884567",
-      contentString: '<div id="content">'+
-      "Classroom 213"+
-      '</div>'},
-  {x: "37.335339", y: "-121.884651",
-      contentString: '<div id="content">'+
-      "Classroom 217"+
-      '</div>'},
-  {x: "37.335394", y: "-121.884731",
-      contentString: '<div id="content">'+
-      "Classroom 219"+
-      '</div>'} 
-  ]},
-  
-  //3rd
-  {children: [{x: "37.335538", y: "-121.885172", 
-  	contentString:'<div id="content">' +
-                                 '<div><h2 id="firstHeading">Reference Desk</h2>' +
-                                 '<a href="#RefDesk"/a>' +
-                                 '</div>' +
-                                 '<div id="bodyContent">' +
-                                 "<div><img src='images/photos/RefDesk-small.jpg' height='100' width='100' align='left'>" +
-                                 '<p>Get help with your research needs.</p></div>' +
-                                 '</div>' +
-                                 '</div>'},
-  {x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-  {x: "37.335486", y: "-121.884657", 
-  	contentString:'<div id="content">'+
-        "Restrooms (1 of 2)"+
-        '</div>'},
-  {x: "37.335462", y: "-121.885354", 
-  	contentString:'<div id="content">'+
-        "Restrooms (2 of 2)"+
-        '</div>'},
-  {x: "37.335684", y: "-121.885109",
-  	contentString:'<div id="content">'+
-        'Study Room 322, 324, 326'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  {x: "37.335375", y: "-121.885291",
-  	contentString:'<div id="content">'+
-        'Study Room 390, 392'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'}
-  ]},
-  
-  //4
-  {children: [{x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-    {x: "37.335486", y: "-121.884657", 
-  	   contentString:'<div id="content">'+
-        "Restrooms"+
-        '</div>'},
-    {x: "37.335374", y: "-121.884808", 
-       contentString:'<div id="content">'+
-        "Student Computing Services"+
-        "<div><img src='images/photos/ComputingServices-small.jpg' height='100' width='100' align='left'>" +
-        "<p>Student Computing Services provides students free access to PC laptops, MacBooks and iPads.</p>" + 
-        '</div>'},
-    {x: "37.335354", y: "-121.884780", 
-       contentString:'<div id="content">'+
-        "Student Technology Training"+
-        "<div><img src='images/photos/TechTraining-small.jpg' height='100' width='100' align='left'>" +
-        "<p>The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>" +
-        '</div>'},
-    {x: "37.335342", y: "-121.884824", 
-       contentString:'<div id="content">'+
-        "Laptops and iPads"+
-        "<img src='images/photos/LaptopsandiPads-small.jpg' height='100' width='100' align='left'>" +
-        "<p>Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.</p>" +
-        '</div>'}
-  ]},
-  
-  //5
-  {children: [{x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-  {x: "37.335486", y: "-121.884657", 
-  	contentString:'<div id="content">'+
-        "Restrooms"+
-        '</div>'},
-  {x: "37.335375", y: "-121.88488", 
-    contentString:'<div id="bodyContent">'+
-        'Printing'+
-        "<div><img src='images/photos/Printing-small.jpg' height='100' width='100' align='left'>" +
-        "<p> You can print from any library computer, USB, or laptop.</p>" +
-        '</div>'}
-
-  ]},
-  
-  //6
-  {children: [{x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-  {x: "37.335486", y: "-121.884657", 
-  	contentString:'<div id="content">'+
-        "Restrooms"+
-        '</div>'},
-  {x: "37.335723", y: "-121.885126", 
-  	contentString:'<div id="content">'+
-        'Study Room 602, 604, 606, 622, 624, 626'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  	  {x: "37.335429", y: "-121.885341",
-  	contentString:'<div id="content">'+
-        'Study Room 632, 634, 662, 664'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'}
-  ]},
-  
-  //7
-  {children: [{x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-  {x: "37.335486", y: "-121.884657", 
-  	contentString:'<div id="content">'+
-        "Restrooms"+
-        '</div>'},
-  {x: "37.335720", y: "-121.885073", 
-  	contentString:'<div id="content">'+
-        'Study Room 702, 704, 706, 722, 724, 726'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  	  {x: "37.335400", y: "-121.885358",
-  	contentString:'<div id="content">'+
-        'Study Room 732, 734, 762, 764'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'}
-  ]},
-  
-  //8
-  {children: [{x: "37.335531", y: "-121.884836", 
-  	contentString:'<div id="content">'+
-        "Elevator"+
-        '</div>'},
-  {x: "37.335486", y: "-121.884657", 
-  	contentString:'<div id="content">'+
-        "Restrooms"+
-        '</div>'},
-  {x: "37.335720", y: "-121.885069", 
-  	contentString:'<div id="content">'+
-        'Study Room 802, 804, 806, 822, 824, 826'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  	  {x: "37.335397", y: "-121.885358",
-  	contentString:'<div id="content">'+
-        'Study Room 832, 834, 862, 864'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'}
-  ]}
-  ];
-
-  */
-
-
-
   function initialize() {
   /*top : 37.336030, -121.885133 ... max first, 
   left : 37.335486, -121.886340 ... 
@@ -531,25 +213,10 @@
       // To keep above code from needing to be redone, we'll adjust from the lower level of 0 to a lower level of -1
       floorNumber = floorNumber - 1;	 
 
-      var i, iMax, contentString;
+      var i, iMax;
       for (i = 0, iMax = locations.length; i < iMax; i++) {
   		  if (locations[i].floor === floorNumber) {
           
-          contentString = '<div id="content">';
-          if (locations[i].name) {
-            contentString += locations[i].name;
-          }
-          if (locations[i].image) {
-            contentString += "<img src='" + locations[i].image + "' height='100' width='100' align='left'>";
-          }
-          if (locations[i].desc) {
-            contentString += "<p>" + locations[i].desc + "</p>";
-          }
-          if (locations[i].linkText && locations[i].linkTarget) {
-            contentString += "<p><a href='" + locations[i].linkTarget + "'>" + locations[i].linkText + "</a></p>";
-          }
-          contentString += '</div>';
-
         
     		  var marker = new google.maps.Marker(
             {
@@ -562,7 +229,7 @@
           );
 
     		  marker['infoWindow'] = new google.maps.InfoWindow({
-    		    content: contentString,
+    		    content: createContent(locations[i]),
     		    maxWidth: 200
     		  });
     		  google.maps.event.addListener(marker, 'click', function() {
@@ -581,6 +248,26 @@
   }catch(e){console.log(e);}
 
   }
+
+  function createContent(location){
+    var contentString;
+    contentString = '<div id="content">';
+    if (location.name) {
+      contentString += location.name;
+    }
+    if (location.image) {
+      contentString += "<img src='" + location.image + "' height='100' width='100' align='left'>";
+    }
+    if (location.desc) {
+      contentString += "<p>" + location.desc + "</p>";
+    }
+    if (location.linkText && location.linkTarget) {
+      contentString += "<p><a href='" + location.linkTarget + "'>" + location.linkText + "</a></p>";
+    }
+    contentString += '</div>';
+    return contentString;
+  };
+
 
   function showReferenceDesk(floorNumber){
   referenceDesk = [

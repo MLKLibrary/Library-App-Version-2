@@ -1,7 +1,9 @@
+var TYPES = {RESTROOM: 1};
 var locations = [
   
 //Restrooms
   {
+    type: TYPES.RESTROOM,
     name: "Restrooms",
     floor: -1,
     floorname: "Lower Level",
@@ -105,7 +107,7 @@ var locations = [
     name: "Elevators",
     floor: 0,
     floorname: "Mezzanine",
-    x: 37.335531, y: -121.884836
+    x: 37.335712, y: -121.885180, 
   },
 
   {
@@ -222,14 +224,67 @@ var locations = [
     linktarget: "http://library.sjsu.edu/video/printing-king-library"
   },
 
+  //Mezzanine
+    {
+      name: "Mezzanine",
+      floor: 0,
+      floorname: "Mezzanine",
+      x: 37.335648, y: -121.885165,
+      desc: "Student Learning Commons",
+      image: "images/photos/Mezzanine-small.jpg"
+    }, 
+      
+  //Student Computing Services
+    {
+      name: "Laptops and iPads",
+      floor: 0,
+      floorname: "Mezzanine",
+      x: 37.335646, y: -121.885103,
+      desc: "Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.",
+      image: "images/photos/LaptopsandiPads-small.jpg"
+    }, 
+
+    {
+      name: "Laptops and iPads",
+      floor: 4,
+      floorname: "4th Floor",
+      x: 37.335646, y: -121.885103,
+      desc: "Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.",
+      image: "images/photos/LaptopsandiPads-small.jpg"
+    },  
+
   //Desks
 
+
+ /* Group, Study, Meeting, and Classrooms
+  {x: "37.335431", y: "-121.884799", 
+    contentString:'<div id="content">'+
+        'SJSU Spartan Collaboration Study Room L67'+
+        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+        "<a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a>" +
+        '</div>'},
   
+   {x: "37.335776", y: "-121.885040", 
+    contentString:'<div id="content">'+
+        'Study Room L02'+
+        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+        '</div>'},
+  
+  {x: "37.335801", y: "-121.885079", 
+    contentString:'<div id="content">'+
+        'Study Room L04'+
+        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+        '</div>'},
+*/        
 
 
-//Group, Study, Meeting, and Classrooms
+//Books By Collection or Call Number Range
   
 
 
 
   ];
+
+ 
