@@ -1,9 +1,9 @@
-var TYPES = {RESTROOM: 1};
+var TYPES = {PLACE: 1, SERVICE: 2, ROOM: 3, COLLECTION: 4};
 var locations = [
   
 //Restrooms
   {
-    type: TYPES.RESTROOM,
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: -1,
     floorname: "Lower Level",
@@ -11,6 +11,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 1,
     floorname: "1st Floor",
@@ -18,6 +19,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 1,
     floorname: "1st Floor",
@@ -25,6 +27,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 1,
     floorname: "1st Floor",
@@ -32,6 +35,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 2,
     floorname: "2nd Floor",
@@ -39,6 +43,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 2,
     floorname: "2nd Floor",
@@ -46,6 +51,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 3,
     floorname: "3rd Floor",
@@ -53,6 +59,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 3,
     floorname: "3rd Floor",
@@ -60,6 +67,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 4,
     floorname: "4th Floor",
@@ -67,6 +75,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 5,
     floorname: "5th Floor",
@@ -74,6 +83,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 6,
     floorname: "6th Floor",
@@ -81,6 +91,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 7,
     floorname: "7th Floor",
@@ -88,6 +99,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Restrooms",
     floor: 8,
     floor: "8th Floor",
@@ -97,6 +109,7 @@ var locations = [
 
 //Elevators
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: -1,
     floorname: "Lower Level",
@@ -104,6 +117,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 0,
     floorname: "Mezzanine",
@@ -111,6 +125,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 1,
     floorname: "1st Floor",
@@ -118,6 +133,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 2,
     floorname: "2nd Floor",
@@ -125,6 +141,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 3,
     floorname: "3rd Floor",
@@ -132,6 +149,7 @@ var locations = [
   },  
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 4,
     floorname: "4th Floor",
@@ -139,6 +157,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 5,
     floorname: "5th Floor",
@@ -146,6 +165,7 @@ var locations = [
   },  
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 6,
     floorname: "6th Floor",
@@ -153,6 +173,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 7,
     floorname: "7th Floor",
@@ -160,6 +181,7 @@ var locations = [
   },
 
   {
+    type: TYPES.PLACE,
     name: "Elevators",
     floor: 8,
     floorname: "8th Floor",
@@ -170,6 +192,7 @@ var locations = [
 
   //Printing
   {
+    type: TYPES.SERVICE,
     name: "Printing",
     floor: -1,
     floorname: "Lower Level",
@@ -181,6 +204,7 @@ var locations = [
   },
 
   {
+    type: TYPES.SERVICE,
     name: "Printing",
     floor: 0,
     floorname: "Mezzanine",
@@ -192,6 +216,7 @@ var locations = [
   },
   
   {
+    type: TYPES.SERVICE,
     name: "Printing",
     floor: 1,
     floorname: "1st Floor",
@@ -203,6 +228,7 @@ var locations = [
   },  
 
   {
+    type: TYPES.SERVICE,
     name: "Printing",
     floor: 2,
     floorname: "2nd Floor",
@@ -214,6 +240,7 @@ var locations = [
   },
 
   {
+    type: TYPES.SERVICE,
     name: "Printing",
     floor: 5,
     floorname: "5th Floor",
@@ -226,6 +253,7 @@ var locations = [
 
   //Mezzanine
     {
+      type: TYPES.PLACE,
       name: "Mezzanine",
       floor: 0,
       floorname: "Mezzanine",
@@ -236,25 +264,56 @@ var locations = [
       
   //Student Computing Services
     {
+      type: TYPES.SERVICE,
       name: "Laptops and iPads",
       floor: 0,
       floorname: "Mezzanine",
       x: 37.335646, y: -121.885103,
-      desc: "Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.",
+      desc: "You may checkout PC laptops, MacBook Pros and iPads from Student Computing Services using your SJSU Tower Card.",
       image: "images/photos/LaptopsandiPads-small.jpg"
     }, 
 
     {
+      type: TYPES.SERVICE,
       name: "Laptops and iPads",
       floor: 4,
       floorname: "4th Floor",
       x: 37.335646, y: -121.885103,
-      desc: "Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.",
+      desc: "Free checkout of PC laptops, MacBook Pros and iPads from Student Computing Services using your SJSU Tower Card.",
       image: "images/photos/LaptopsandiPads-small.jpg"
     },  
 
-  //Desks
+  //Student Technology Training
+    {
+      type: TYPES.SERVICE,
+      name: "Student Technology Training",
+      floor: 4,
+      floorname: "4th Floor",
+      x: 37.335354, y: -121.884780,
+      desc: "The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.",
+      image: "images/photos/TechTraining-small.jpg"  
+    },
 
+  //Desks
+    {
+      type: TYPES.PLACE,
+      name: "Circulation Desk",
+      floor: 1,
+      floorname: "1st Floor",
+      x: 37.335360, y: -121.885028,
+      desc: "Check out materials or get help with your library account.",
+      image: "images/photos/CircDesk-small.jpg"
+    },
+
+    {
+      type: TYPES.PLACE,
+      name: "Reference Desk",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335538, y: -121.885172,
+      desc: "Get help with your research needs.",
+      image: "images/photos/RefDesk-small.jpg"
+    },
 
  /* Group, Study, Meeting, and Classrooms
   {x: "37.335431", y: "-121.884799", 
