@@ -265,21 +265,21 @@ var locations = [
   //Student Computing Services
     {
       type: TYPES.SERVICE,
-      name: "Laptops and iPads",
+      name: "Student Computing Services - Laptops and iPads",
       floor: 0,
       floorname: "Mezzanine",
       x: 37.335646, y: -121.885103,
-      desc: "You may checkout PC laptops, MacBook Pros and iPads from Student Computing Services using your SJSU Tower Card.",
+      desc: "Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.",
       image: "images/photos/LaptopsandiPads-small.jpg"
     }, 
 
     {
       type: TYPES.SERVICE,
-      name: "Laptops and iPads",
+      name: "Student Computing Services - Laptops and iPads",
       floor: 4,
       floorname: "4th Floor",
       x: 37.335646, y: -121.885103,
-      desc: "Free checkout of PC laptops, MacBook Pros and iPads from Student Computing Services using your SJSU Tower Card.",
+      desc: "Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.",
       image: "images/photos/LaptopsandiPads-small.jpg"
     },  
 
@@ -315,29 +315,235 @@ var locations = [
       image: "images/photos/RefDesk-small.jpg"
     },
 
- /* Group, Study, Meeting, and Classrooms
-  {x: "37.335431", y: "-121.884799", 
-    contentString:'<div id="content">'+
-        'SJSU Spartan Collaboration Study Room L67'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a>" +
-        '</div>'},
-  
-   {x: "37.335776", y: "-121.885040", 
-    contentString:'<div id="content">'+
-        'Study Room L02'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  
-  {x: "37.335801", y: "-121.885079", 
-    contentString:'<div id="content">'+
-        'Study Room L04'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-*/        
+    {
+      type: TYPES.PLACE,
+      name: "Reference Desk",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: 37.335538, y: -121.885172,
+      desc: "Get help with your research needs.",
+      image: "images/photos/RefDesk-small.jpg"
+    },
 
+
+ //Group, Study, Meeting, and Classrooms
+   //Lower Level
+
+    {
+      type: TYPES.ROOM,
+      name: "SJSU Spartan Collaboration Study Room L67",
+      floor: -1,
+      floorname: "Lower Level",
+      x: 37.335431, y: -121.884799,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
+    {
+      type: TYPES.ROOM,
+      name: "Study Room L02",
+      floor: -1,
+      floorname: "Lower Level",
+      x: 37.335776, y: -121.885040,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },  
+  
+    {
+      type: TYPES.ROOM,
+      name: "Study Room L04",
+      floor: -1,
+      floorname: "Lower Level",
+      x: 37.335801, y: -121.885079,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+  
+ 
+  //1st Floor
+    {
+      type: TYPES.ROOM,
+      name: "Classroom 125",
+      floor: 1,
+      floorname: "1st Floor",
+      x: 37.335410, y: -121.884567,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+    
+  
+  //2nd Floor
+    {
+      type: TYPES.ROOM,
+      name: "Classroom 213",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335410, y: -121.884567,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
+    {
+      type: TYPES.ROOM,
+      name: "Classroom 217",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335339, y: -121.884651,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
+    {
+      type: TYPES.ROOM,
+      name: "Classroom 219",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335394, y: -121.884731,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
+    {
+      type: TYPES.ROOM,
+      name: "Classroom 224",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335684, y: -121.885109,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
+    {
+      type: TYPES.ROOM,
+      name: "Classroom 226",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335713, y: -121.885141,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
+  
+  //3rd Floor
+
+    {
+      type: TYPES.ROOM,
+      name: "Study Rooms 322, 324, 326",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: 37.335684, y: -121.885109,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
+    {
+      type: TYPES.ROOM,
+      name: "Study Room 390, 392",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: 37.335375, y: -121.885291,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+  
+ //6th Floor
+ 
+     {
+      type: TYPES.ROOM,
+      name: "Study Room 602, 604, 606, 622, 624, 626",
+      floor: 6,
+      floorname: "6th Floor",
+      x: 37.335723, y: -121.885126,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+    
+    {
+      type: TYPES.ROOM,
+      name: "Study Room 632, 634, 662, 664",
+      floor: 6,
+      floorname: "6th Floor",
+      x: 37.335429, y: -121.885341,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },    
+  
+  //7th Floor
+    
+    {
+      type: TYPES.ROOM,
+      name: "Study Room 702, 704, 706, 722, 724, 726",
+      floor: 7,
+      floorname: "7th Floor",
+      x: 37.335720, y: -121.885073,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
+    {
+      type: TYPES.ROOM,
+      name: "Study Room 732, 734, 762, 764",
+      floor: 7,
+      floorname: "7th Floor",
+      x: 37.335400, y: -121.885358,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    }, 
+
+  //8th Floor
+    {
+      type: TYPES.ROOM,
+      name: "Study Room 802, 804, 806, 822, 824, 826",
+      floor: 8,
+      floorname: "8th Floor",
+      x: 37.335720, y: -121.885069,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    }, 
+
+    {
+      type: TYPES.ROOM,
+      name: "Study Room 832, 834, 862, 864",
+      floor: 8,
+      floorname: "8th Floor",
+      x: 37.335397, y: -121.885358,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
 
 //Books By Collection or Call Number Range
   
