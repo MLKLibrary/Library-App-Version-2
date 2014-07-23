@@ -29,7 +29,11 @@ function initialize() {
 
   });
 
-
+  $('#select-native-2').on('change', function() {
+    clearMap();
+    showlocation( this.value ); // or $(this).val()
+  });
+  
   /*top : 37.336030, -121.885133 ... max first, 
   left : 37.335486, -121.886340 ... 
   bottom : 37.334880, -121.885057
@@ -59,6 +63,7 @@ function initialize() {
   var wHeight = $(document).height();
   var mapHeight = wHeight - $('#header').height() - $('#footer').height()-36;
   $("#map-canvas").css("height", mapHeight);
+  
   google.maps.event.trigger(map, "resize");
 
   google.maps.event.addListener(map,'dragend',function(event) {
@@ -96,13 +101,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 function showlocation(floorNumber, locationName){
+  $('#select-native-2').val(floorNumber).selectmenu('refresh');
   historicalOverlay = new google.maps.GroundOverlay(
     imageDir + (floorNumber)+ '-new.PNG',
     imageBounds);
   historicalOverlay.setMap(map);
   try{	      
     for (i = 0, iMax = locations.length; i < iMax; i++) {
-      if (locations[i].name === locationName && locations[i].floor == floorNumber) {
+      if ((!locationName || locations[i].name === locationName) && locations[i].floor == floorNumber) {
         var marker = new google.maps.Marker({animation: google.maps.Animation.DROP,
           position : new google.maps.LatLng(locations[i].x, locations[i].y),
           title : "marker",
@@ -134,62 +140,6 @@ function timer(floorNum) {
     else
       showFloor(floorNum);
   }
-}
-
-function initializeSlider() {
-  var floors = {
-   10 : "LL",
-   11 : "M",
-   12 : "1st Fl",
-   13 : "2nd Fl",
-   14 : "3rd Fl",
-   15 : "4th Fl",
-   16 : "5th Fl",
-   17 : "6th Fl",
-   18 : "7th Fl",
-   19 : "8th Fl"
-  };
-  $('#slider-main').min = 10;
-  $('#slider-main').max = 19;
-  $('#slider-main').val("1st Fl");
-
-  $('#slider-main').bind("change", function(event, ui) {
-    var floorNumber = floors[event.target.value];
-
-
-    if(parseInt(''+event.target.value) >= 10 && parseInt(''+event.target.value) <= 19) {
-      $('#slider-main').val(floors[event.target.value]);
-    }
-    if(event.target.value.toLowerCase() === '0') {
-      var num = '0';
-      timer(num);
-//      setTimeout(function(){timer(num)}, 100);
-    }
-
-    else if(event.target.value.toLowerCase() === '-1' || event.target.value.toLowerCase() === '-1') {
-      var num = '-1';
-      timer(num);
-//      setTimeout(function(){timer(num)}, 100);
-    }
-  
-    else if(parseInt(''+event.target.value) >= 0 ){
-      var num = ''+parseInt(''+event.target.value);
-      timer(num);
-//      setTimeout(function(){timer(num)}, 100);
-    }
-  
-  });
- 
-  $('#slider-main').slider({
-    value: 2,
-    min: 0,
-    max: 9,
-    step: 1,
-    slide: function(event, ui){
-  	 //showFloor(floors[ui.value]);
-    }
-
-  });
 }
 
 function showFloor(floorNumber){
@@ -454,7 +404,7 @@ function showLocation(type){
   $.mobile.changePage( "#home", { transition: "slideup"} );
   clearMap();
   historicalOverlay.setMap(map);
-  $('#slider-main').val(String(pinInfo.floor));
+  $('#select-native-2').val(floor).selectmenu('refresh');
   var infowindow = new google.maps.InfoWindow({
     content: pinInfo.contentString,
     maxWidth: 200

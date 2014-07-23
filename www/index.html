@@ -37,16 +37,33 @@
 
 </head>
 
-<body onload="showFloor(1);initializeSlider();">
+<body>
 
 <!--Home-->    
   <div data-role="page" data-theme="b" id="home">
 	 
     <div data-role="header" id="header">
       <h1>SJSU Library</h1>
-      <input type="string" data-type="range" data-theme="a" name="slider-2" id="slider-main" data-highlight="true" min="10" max="19" value="12" class="ui-shadow-inset ui-body-inherit ui-corner-all ui-slider-input">
     </div>
-        
+      
+    <form>
+      <div class="ui-field-contain">
+        <select name="select-native-2" id="select-native-2" data-mini="true">
+          <option value="-1">Lower Level</option>
+          <option value="0">Mezzanine</option>
+          <option value="1" selected>1st Floor</option>
+          <option value="2">2nd Floor</option>
+          <option value="3">3rd Floor</option>
+          <option value="4">4th Floor</option>
+          <option value="5">5th Floor</option>
+          <option value="6">6th Floor</option>
+          <option value="7">7th Floor</option>
+          <option value="8">8th Floor</option>
+        </select>
+      </div>
+    </form> 
+ 
+    
     <div data-role="content">
 		  <div id="map-canvas">
       </div>
@@ -78,7 +95,7 @@
    </div>
   </div>
 
-<!--Rooms-->
+<!--Rooms
   <div data-role="page" id="Rooms" data-theme="a" data-url="two">
 
 	 <div data-role="header">
@@ -86,7 +103,7 @@
 		  <h1>Main Menu</h1>
 	 </div><!-- /header -->
 
-   <div data-role="content">	
+  <!-- <div data-role="content">	
      <div role="main" class="ui-content">
       <ul data-role="listview" data-theme="b" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
         <li class="ui-first-child">
@@ -130,7 +147,7 @@
   	</div>
 
 	   <div data-role="content">	
-	     <div data-role="collapsibleset" class="ui-collapsible-set ui-group-theme-a ui-corner-all data-theme-a">
+	   <div data-role="collapsibleset" class="ui-collapsible-set ui-group-theme-a ui-corner-all data-theme-a">
 				
         <div data-role="collapsible">
           <h3>Find Rooms</h3>
@@ -192,8 +209,7 @@
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('834');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">834</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('862');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">862</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('864');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">864</a></li>
-
-      </ul>
+          </ul>
         </div>
 				
         <div data-role="collapsible">
@@ -233,58 +249,43 @@
             <a href="#home" data-floor="8" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">8th Floor</a></li>
           </ul> 
         </div>
-				
-        <div data-role="collapsible">
-          <h3>Elevators</h3>
-          <p>Find the elevators on the library map.</p>
-          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-            <li class="ui-first-child">
-            <a href="#home" data-floor="-1" data-location="Elevators"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a></li>
-            <li><a href="#home" data-floor="0" data-location="Elevators"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Mezzanine</a></li>
-           <li><a href="#home" data-floor="1" data-location="Elevators" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">1st Floor</a></li>
-            <li><a href="#home" data-floor="3" data-location="Elevators"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a></li>
-            <li><a href="#home" data-floor="4" data-location="Elevators"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
-            <li><a href="#home" data-floor="5" data-location="Elevators"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">4th Floor</a></li>
-            <li><a href="#home" data-floor="6" data-location="Elevators"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">5th Floor</a></li>
-            <li><a href="#home" data-floor="7" data-location="Elevators"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">6th Floor</a></li>
-            <li><a href="#home" data-floor="8" data-location="Elevators"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">7th Floor</a></li>
-          </ul>
-        </div>
         
         <div data-role="collapsible">
-          <h3>Printing</h3>
+          <h3>Printing, Scanning, and Copying</h3>
           <p>You can print from any library computer, USB, or laptop. Printing stations can be found on the lower level, 1st floor, 2nd floor, and 5th floor.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             <li class="ui-first-child">
-                <a href="#home" data-floor="-1" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a>
+                <a href="#home" data-floor="-1" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - Lower Level</a>
             </li>
             <li>
-                <a href="#home" data-floor="0" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Mezzanine</a>
+                <a href="#home" data-floor="0" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - Mezzanine</a>
             </li>
             <li>
-                <a href="#home" data-floor="1" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">1st Floor</a>
+                <a href="#home" data-floor="1" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 1st Floor</a>
             </li>
             <li>
-                <a href="#home" data-floor="2" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a>
+                <a href="#home" data-floor="2" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 2nd Floor</a>
             </li>
             <li>
-                <a href="#home" data-floor="5" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">5th Floor</a>
+                <a href="#home" data-floor="5" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 5th Floor</a>
             </li>
           </ul>  
-
-
         </div>
         
         <div data-role="collapsible">
           <h3>Mezzanine</h3>
           <p>The Mezzanine is an SJSU student-only space for collaborating, studying, or just relaxing between classes. It is located between the lower level and 1st floor.</p>
-          <a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <ul>
+            <li><a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Mezzanine</li>
+          </ul>  
         </div>
         
         <div data-role="collapsible">
           <h3>Student Computing Services - Laptops and iPads</h3>
           <p>Student Computing Services provides students free access to PC laptops, MacBooks and iPads. They are located on the 4th floor. You can also check out iPads and laptops on the Mezzanine.</p>
-          <a href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More about Student Computing Services on the website.</a>
+          <ul>
+            <li><a href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More about Student Computing Services on the website.</a></li>
+          </ul>  
         </div>
         
         <div data-role="collapsible">
@@ -292,43 +293,42 @@
           <p>A library card and PIN are needed to borrow items or get access to ebooks and databases. Bring your Tower Card to the Circulation Desk to get a library card.</p>
           <p><a href="http://library.sjsu.edu/get-library-card/get-library-card-0" class="ui-btn-ui-icon-carat-r">More information on the SJSU Library Website</a></p>
           <a href="#home" onclick="javascript:clearMap();showCirculationDesk(1);" class="ui-btn ui-icon-carat-r">Get help at the Circulation Desk. 1st Floor.</a>
-
         </div>
 
         <div data-role="collapsible">
             <h3>Library FAQ</h3>
             <p>Are you looking for something not in this list? Try the Frequently Asked Questions on the library website. You can also email new questions.</p>
             <a href="http://answers.sjlibrary.org/" class="ui-btn ui-mini ui-btn-inline ui-corner-all">SJSU Library Website FAQ</a>
-          </div>
+        </div>
 
-          <div data-role="collapsible">
-            <h3>24 Hour Live Reference Chat</h3>
-            <p>Use the 24/7 Chat service to get help with questions or research.</p>
-            <a href="http://library.sjsu.edu/ask-librarian/ask-librarian" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find on SJSU Library Website</a>
-          </div>
+        <div data-role="collapsible">
+          <h3>24 Hour Live Reference Chat</h3>
+          <p>Use the 24/7 Chat service to get help with questions or research.</p>
+          <a href="http://library.sjsu.edu/ask-librarian/ask-librarian" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find on SJSU Library Website</a>
+        </div>
 
-          <div data-role="collapsible">
-            <h3>Research Guides by Subject</h3>
-            <p>Research Guides list books, databases and online tools for all departments and many individual courses.</p>
+        <div data-role="collapsible">
+          <h3>Research Guides by Subject</h3>
+          <p>Research Guides list books, databases and online tools for all departments and many individual courses.</p>
 
-            <a href="http://libguides.sjsu.edu/index" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More information on SJSU Library Website</a>
-          </div>
+          <a href="http://libguides.sjsu.edu/index" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More information on SJSU Library Website</a>
+        </div>
 
-          <div data-role="collapsible">
-            <h3>Find a Librarian</h3>
-            <p>There is a librarian for every subject offered at SJSU. </p>
-            <a href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons"class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
-          </div>
+        <div data-role="collapsible">
+          <h3>Find a Librarian</h3>
+          <p>There is a librarian for every subject offered at SJSU. </p>
+          <a href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons"class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
+        </div>
 
-          <div data-role="collapsible">
-            <h3>Student Technology Training</h3>
-            <p> The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>
+        <div data-role="collapsible">
+          <h3>Student Technology Training</h3>
+          <p> The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>
 
 
-            <a href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all"> More information on SJSU Library Website</a>
-          </div>
+          <a href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all"> More information on SJSU Library Website</a>
+        </div>
    
-      </div> 
+     </div> 
       
       <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
         <div class="ui-grid-d center" data-role="navbar">
@@ -598,7 +598,7 @@
           </li>
           <li><a href="#home" data-icon="home">Home</a>
           </li>
-          <li><a href="http://library.sjsu.edu" data-icon="action">SJSU ibrary Website</a>
+          <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
           </li>
         </ul>
       </div>
