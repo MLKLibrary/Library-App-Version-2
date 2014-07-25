@@ -9,6 +9,10 @@ var markers = [];
 var imageBounds = new google.maps.LatLngBounds(new google.maps.LatLng(37.334847, -121.886208), new google.maps.LatLng(37.336027, -121.883861));
 var mlkLibraryGPSCoord = new google.maps.LatLng(37.335438, -121.885036);
 
+/*var ref = window.open(encodeURI('http://library.sjsu.edu'), '_blank', 'location=no');
+        // relative document
+        ref = window.open('http://library.sjsu.edu');
+        */
 
 function clearMap(){
   removeOverlay();
@@ -25,7 +29,7 @@ function initialize() {
   $('.pintap').on('click', function() {
     clearMap();
     var $this = $(this);
-    showlocation($this.data('floor'), $this.data('location'));
+    showlocation($this.data('floor'), $this.data('location'), $this.data('type'));
 
   });
 
@@ -100,7 +104,9 @@ function removeOverlay() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-function showlocation(floorNumber, locationName){
+function showlocation(floorNumber, locationName, locationType){
+console.dir(locationName);
+console.dir(locationType);
   $('#select-native-2').val(floorNumber).selectmenu('refresh');
   historicalOverlay = new google.maps.GroundOverlay(
     imageDir + (floorNumber)+ '-new.PNG',
@@ -108,7 +114,7 @@ function showlocation(floorNumber, locationName){
   historicalOverlay.setMap(map);
   try{	      
     for (i = 0, iMax = locations.length; i < iMax; i++) {
-      if ((!locationName || locations[i].name === locationName) && locations[i].floor == floorNumber) {
+      if ((!locationName || locations[i].name === locationName) && (!locationType || locations[i].type == locationType) && locations[i].floor == floorNumber) {
         var marker = new google.maps.Marker({animation: google.maps.Animation.DROP,
           position : new google.maps.LatLng(locations[i].x, locations[i].y),
           title : "marker",
@@ -170,7 +176,6 @@ function showFloor(floorNumber){
     }
 
     try{
-      // To keep above code from needing to be redone, we'll adjust from the lower level of 0 to a lower level of -1
       floorNumber = floorNumber - 1;	 
       var i, iMax;
       for (i = 0, iMax = locations.length; i < iMax; i++) {
@@ -224,178 +229,6 @@ function createContent(location){
   return contentString;
 };
 
-
-function showRooms(floorNumber) {
-  Rooms = []
-
-
-  switch(floorNumber) {
-    case 0: {
-      historicalOverlay = new google.maps.GroundOverlay(imageDir + '-1-new.PNG', imageBounds);
-      historicalOverlay.setMap(map);
-      for(var i = 0; i <Rooms[0].children.length; i++) {
-
-        var marker =     new google.maps.Marker({animation: google.maps.Animation.DROP,
-        position : new google.maps.LatLng(Rooms[0].children[i].x, Rooms[0].children[i].y),
-        title : "marker",
-        map: map,
-        draggable: false
-      });
-      marker['infoWindow'] = new google.maps.InfoWindow({
-        content: Rooms[0].children[i].contentString,
-        maxWidth: 200
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        try {
-          for(var b = 0; b < markers.length; b++) {
-            var currentMarker = markers[i];
-            currentMarker["infoWindow"].close();
-          }
-        } catch(e){}
-        this['infoWindow'].open(map,this);
-      });
-      markers.push(marker);
-    }
-  }
-  break;
-  case 2: {historicalOverlay = new google.maps.GroundOverlay(imageDir + '2-new.PNG', imageBounds);
-    historicalOverlay.setMap(map);
-    for(var i = 0; i < Rooms[1].children.length; i++) {
-
-      var marker = new google.maps.Marker({
-        animation: google.maps.Animation.DROP,
-        position : new google.maps.LatLng(Rooms[1].children[i].x, Rooms[1].children[i].y),
-        title : "marker",
-        map: map,
-        draggable: false
-      });
-      marker['infoWindow'] = new google.maps.InfoWindow({
-        content: Rooms[1].children[i].contentString,
-        maxWidth: 200
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        try {
-          for(var b = 0; b < markers.length; b++) {
-            var currentMarker = markers[i];
-            currentMarker["infoWindow"].close();
-          }
-        } catch(e){}
-        this['infoWindow'].open(map,this);
-      });
-      markers.push(marker);
-    }
-  }
-  break;
-  case 3: {historicalOverlay = new google.maps.GroundOverlay(imageDir + '3-new.PNG', imageBounds);
-    historicalOverlay.setMap(map);
-    for(var i = 0; i < Rooms[1].children.length; i++) {
-
-      var marker = new google.maps.Marker({
-        animation: google.maps.Animation.DROP,
-        position : new google.maps.LatLng(Rooms[2].children[i].x, Rooms[2].children[i].y),
-        title : "marker",
-        map: map,
-        draggable: false
-      });
-      marker['infoWindow'] = new google.maps.InfoWindow({
-        content: Rooms[2].children[i].contentString,
-        maxWidth: 200
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        try {
-          for(var b = 0; b < markers.length; b++) {
-            var currentMarker = markers[i];
-            currentMarker["infoWindow"].close();
-          }
-        } catch(e){}
-        this['infoWindow'].open(map,this);
-      });
-      markers.push(marker);
-    }
-  }
-  break;
-  case 6: {historicalOverlay = new google.maps.GroundOverlay(
-   imageDir + '6-new.PNG',
-   imageBounds);
-  historicalOverlay.setMap(map);
-  for(var i = 0; i < Rooms[3].children.length; i++) {
-
-    var marker =     new google.maps.Marker({animation: google.maps.Animation.DROP,
-      position : new google.maps.LatLng(Rooms[3].children[i].x, Rooms[3].children[i].y),
-      title : "marker",
-      map: map,
-      draggable: false
-    });
-    marker['infoWindow'] = new google.maps.InfoWindow({
-      content: Rooms[3].children[i].contentString,
-      maxWidth: 200
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-      try {
-        for(var b = 0; b < markers.length; b++) {
-          var currentMarker = markers[i];
-          currentMarker["infoWindow"].close();
-        }} catch(e){}
-        this['infoWindow'].open(map,this);
-      });
-    markers.push(marker);
-  }
-  }break;
-  case 7: {historicalOverlay = new google.maps.GroundOverlay(
-   imageDir + '7-new.PNG',
-   imageBounds);
-  historicalOverlay.setMap(map);
-  for(var i = 0; i < Rooms[4].children.length; i++) {
-
-    var marker =     new google.maps.Marker({animation: google.maps.Animation.DROP,
-      position : new google.maps.LatLng(Rooms[4].children[i].x, Rooms[4].children[i].y),
-      title : "marker",
-      map: map,
-      draggable: false
-    });
-    marker['infoWindow'] = new google.maps.InfoWindow({
-      content: Rooms[4].children[i].contentString,
-      maxWidth: 200
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-      try {
-        for(var b = 0; b < markers.length; b++) {
-          var currentMarker = markers[i];
-          currentMarker["infoWindow"].close();
-        }} catch(e){}
-        this['infoWindow'].open(map,this);
-      });
-    markers.push(marker);
-  }
-  }break;
-  case 8: {historicalOverlay = new google.maps.GroundOverlay(
-   imageDir + '8-new.PNG',
-   imageBounds);
-  historicalOverlay.setMap(map);
-  for(var i = 0; i < Rooms[5].children.length; i++) {
-
-    var marker =     new google.maps.Marker({animation: google.maps.Animation.DROP,
-      position : new google.maps.LatLng(Rooms[5].children[i].x, Rooms[5].children[i].y),
-      title : "marker",
-      map: map,
-      draggable: false
-    });
-    marker['infoWindow'] = new google.maps.InfoWindow({
-      content: Rooms[5].children[i].contentString,
-      maxWidth: 200
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-      try {
-        for(var b = 0; b < markers.length; b++) {
-          var currentMarker = markers[i];
-          currentMarker["infoWindow"].close();
-        }} catch(e){}
-        this['infoWindow'].open(map,this);
-      });
-    markers.push(marker);
-  }	  }break;
-}
-
 function showLocation(type){
   var pinInfo = bookNumberIndex[type];
   historicalOverlay = new google.maps.GroundOverlay(
@@ -421,7 +254,7 @@ function showLocation(type){
   markers.push(newMarker);
 }
 
-function RoomByNumber(roomString) {
+/*function RoomByNumber(roomString) {
   Rooms = {};
 
   if(roomString.charAt(0) === 'L')
@@ -469,6 +302,7 @@ function RoomByNumber(roomString) {
   return "error";
   }
 }
+*/
 
 $(window).resize(function() {
   map.setCenter(prevCenter);

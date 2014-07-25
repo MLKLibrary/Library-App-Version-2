@@ -94,32 +94,6 @@
         </div>
    </div>
   </div>
-
-<!--Rooms
-  <div data-role="page" id="Rooms" data-theme="a" data-url="two">
-
-	 <div data-role="header">
-	   <a href="#home" data-icon="back">Back</a>
-		  <h1>Main Menu</h1>
-	 </div><!-- /header -->
-
-  <!-- <div data-role="content">	
-     <div role="main" class="ui-content">
-      <ul data-role="listview" data-theme="b" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-        <li class="ui-first-child">
-          <a href="#Rooms" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Rooms</a>
-        </li>
-        <li><a href="#circulationDesk" data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Circulation Desk</a>
-        </li>
-        <li><a href="#referenceDesk" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Reference Desk</a>
-        </li>
-        <li><a href="#Restrooms" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Restrooms</a>
-        </li>
-        <li><a href="#elevators" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Elevators</a>
-        </li>
-      </ul>
-    </div>
-  </div><!-- /content -->
   
   <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
     <div class="ui-grid-d center" data-role="navbar">
@@ -154,13 +128,14 @@
           <p>Find study rooms, classrooms and meeting rooms in the SJSU Library.</p>
           <ul data-role="listview" data-theme="a" data-id="findRoombyNumber" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
         
-          <li class="ui-first-child ui-last-child">
-          <a href="#home" onclick="javascript:clearMap();RoomByNumber('L02');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L02</a></li>
+          <li>
+          <button data-floor="-1" data-type="3" class="pintap ui-btn ui-btn-inline" ><a href="#home"> Lower Level Rooms</a></button>
           
-          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L04');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L04</a></li>
-          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L67');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L67</a></li>
+          <li><button data-floor="-1" data-location class="pintap ui-btn ui-btn-inline"><a href="#home">"Study Room L04">Study Room L04</a></button></li>
+
+          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L67');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Study Room L67</a></li>
           
-          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('125');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">125</a></li>
+          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('125');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Classroom 125</a></li>
 
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('213');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">213</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('217');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">217</a></li>
@@ -169,13 +144,14 @@
 
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('224');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">224</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('226');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">226</a></li>
+          
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('322');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">322</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('324');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">324</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('326');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">326</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('390');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">390</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('392');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">392</a></li>
-          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('602');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">602</a></li>
           
+          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('602');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">602</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('604');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">604</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('606');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">606</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('622');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">622</a></li>
@@ -183,21 +159,20 @@
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('626');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">626</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('632');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">632</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('634');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">634</a></li>
-          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('662');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">662</a></li>
-          
-          
+          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('662');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">662</a></li>        
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('664');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">664</a></li>
+          
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('702');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">702</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('704');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">704</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('706');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">706</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('722');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">722</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('724');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">724</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('726');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">726</a></li>
-          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('732');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">732</a></li>
-          
+          <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('732');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">732</a></li>   
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('734');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">734</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('762');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">762</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('764');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">764</a></li>
+          
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('802');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">802</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('804');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">804</a></li>
           <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('806');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">806</a></li>
@@ -234,7 +209,7 @@
 				
         <div data-role="collapsible">
           <h3>Restrooms</h3>
-          <p>Restrooms are located on each floor of the library.</p>
+          <p>Restrooms are located along the blue wall on each floor of the library.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
             <li class="ui-first-child">
             <a href="#home" data-floor="-1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a></li>
@@ -275,7 +250,7 @@
         <div data-role="collapsible">
           <h3>Mezzanine</h3>
           <p>The Mezzanine is an SJSU student-only space for collaborating, studying, or just relaxing between classes. It is located between the lower level and 1st floor.</p>
-          <ul>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             <li><a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Mezzanine</li>
           </ul>  
         </div>
@@ -482,7 +457,7 @@
   </div>
 
 <!--Events-->
-  <div data-role=page id="win1" data-theme="b" data-url="two">
+  <div data-role=page id="win1" data-theme="a" data-url="two">
   
   <a href="#win1" data-icon="back">Back</a>
 

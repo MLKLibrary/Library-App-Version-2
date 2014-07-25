@@ -258,8 +258,10 @@ var locations = [
       floor: 0,
       floorname: "Mezzanine",
       x: 37.335648, y: -121.885165,
-      desc: "Student Learning Commons",
-      image: "images/photos/Mezzanine-small.jpg"
+      desc: "Student Learning and Research Commons is located above the Children's Room.",
+      image: "images/photos/Mezzanine-small.jpg",
+      linktext: "Learn more about the Mezz on the King website.",
+      linktarget: "http://library.sjsu.edu/mezz/sjsu-student-learning-and-research-commons"
     }, 
       
   //Student Computing Services
@@ -328,19 +330,6 @@ var locations = [
 
  //Group, Study, Meeting, and Classrooms
    //Lower Level
-
-    {
-      type: TYPES.ROOM,
-      name: "SJSU Spartan Collaboration Study Room L67",
-      floor: -1,
-      floorname: "Lower Level",
-      x: 37.335431, y: -121.884799,
-      desc: "The library has several rooms available for group study.",
-      image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
-    },
-
     {
       type: TYPES.ROOM,
       name: "Study Room L02",
@@ -365,7 +354,18 @@ var locations = [
       linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
   
- 
+    {
+      type: TYPES.ROOM,
+      name: "Study Room L67",
+      floor: -1,
+      floorname: "Lower Level",
+      x: 37.335431, y: -121.884799,
+      desc: "The library has several rooms available for group study projects.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linktext: "Reserve Rooms Online",
+      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
+
   //1st Floor
     {
       type: TYPES.ROOM,
