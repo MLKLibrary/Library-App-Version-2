@@ -4,7 +4,7 @@ $("#toggleEvtsVw").bind("click",function(event) {
   {
     toggleBtn.removeClass("table");
     toggleBtn.addClass("cal");
-    toggleBtn.html("Show table");
+    toggleBtn.html("Event Listings");
     $("#jMonthCalendar").show();
     $("#evtsTable").hide();
   }
@@ -12,7 +12,7 @@ $("#toggleEvtsVw").bind("click",function(event) {
   {
     toggleBtn.removeClass("cal");
     toggleBtn.addClass("table");
-    toggleBtn.html("Show calendar view");
+    toggleBtn.html("Calendar");
     $("#jMonthCalendar").hide();
     $("#evtsTable").show();
   }
@@ -24,7 +24,7 @@ $(document).bind("pagebeforeshow",function() {
 });
 
 function PopulateEventsTable(eventList) {
-  var tableHTML = "<table data-role='table' class='ui-responsive ui-shadow'><thead><tr><th class='tcell'>Event Name</th><th>Time & Location</th></tr></thead><tbody>";
+  var tableHTML = "<table data-role='table' class='ui-responsive'><thead><tr><th class='tcell'>Event Name</th><th>Time & Location</th></tr></thead><tbody>";
   for(var i = 0; i<eventList.length; i++) {
     var lastClass = i==eventList.length-1?"last":"";
     tableHTML+= "<tr><td class='tcell'>"+eventList[i].Title+"</td><td>"+eventList[i].Location+"</br>"+eventList[i].Time+"</td></tr>";

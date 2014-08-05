@@ -11,8 +11,8 @@ var mlkLibraryGPSCoord = new google.maps.LatLng(37.335438, -121.885036);
 
 /*var ref = window.open(encodeURI('http://library.sjsu.edu'), '_blank', 'location=no');
         // relative document
-        ref = window.open('http://library.sjsu.edu');
-        */
+        ref = window.open('http://library.sjsu.edu');*/
+        
 
 function clearMap(){
   removeOverlay();
@@ -26,6 +26,7 @@ function clearMap(){
 }
 
 function initialize() {
+  
   $('.pintap').on('click', function() {
     clearMap();
     var $this = $(this);
@@ -53,9 +54,9 @@ function initialize() {
   tg: -121.88627304068376, -121.88369812002946
   ta: 37.33610211206025, 37.334950498389865, 
 
-  */
-  prevCenter = mlkLibraryGPSCoord;
 
+  prevCenter = mlkLibraryGPSCoord;
+  */
 
   var mapOptions = {
     zoom: 20,
@@ -91,6 +92,7 @@ function initialize() {
     imageBounds);
 
   addOverlay();
+  showFloor(1);
 }
 
 function addOverlay() {
@@ -105,8 +107,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 function showlocation(floorNumber, locationName, locationType){
-console.dir(locationName);
-console.dir(locationType);
   $('#select-native-2').val(floorNumber).selectmenu('refresh');
   historicalOverlay = new google.maps.GroundOverlay(
     imageDir + (floorNumber)+ '-new.PNG',
@@ -128,7 +128,7 @@ console.dir(locationType);
         google.maps.event.addListener(marker, 'click', function() {
           try {
             for(var b = 0; b < markers.length; b++) {
-              var currentMarker = markers[i];
+              var currentMarker = markers[b];
               currentMarker["infoWindow"].close();
             }} catch(e){}
             this['infoWindow'].open(map,this);
@@ -254,56 +254,6 @@ function showLocation(type){
   markers.push(newMarker);
 }
 
-/*function RoomByNumber(roomString) {
-  Rooms = {};
-
-  if(roomString.charAt(0) === 'L')
-  {
-    historicalOverlay = new google.maps.GroundOverlay(
-     imageDir + '-1-new.PNG',imageBounds);
-    historicalOverlay.setMap(map);
-  }
-  else if(roomString.charAt(0) === '2' ||roomString.charAt(0) === '3' ||roomString.charAt(0) === '6' ||roomString.charAt(0) === '7' ||roomString.charAt(0) === '8'){
-    historicalOverlay = new google.maps.GroundOverlay(
-      roomString.charAt(0)+ imageDir + '-new.PNG',imageBounds);
-    historicalOverlay.setMap(map);
-  }
-  else
-  {
-    console.log("error");
-    console.dir(roomString);
-    return "error";
-  }
-
-  try{
-   var myRoom = Rooms[roomString];
-   var marker = new google.maps.Marker({animation: google.maps.Animation.DROP,
-    position : new google.maps.LatLng(myRoom.x, myRoom.y),
-    title : "marker",
-    map: map,
-    draggable: false
-  });
-   marker['infoWindow'] = new google.maps.InfoWindow({
-    content: myRoom.contentString,
-    maxWidth: 200
-  });
-   google.maps.event.addListener(marker, 'click', function() {
-    try {
-      for(var b = 0; b < markers.length; b++) {
-        var currentMarker = markers[i];
-        currentMarker["infoWindow"].close();
-      }} catch(e){}
-      this['infoWindow'].open(map,this);
-    });
-   markers.push(marker);
- }
- catch(e) {
-  console.log("error 2");
-  return "error";
-  }
-}
-*/
-
 $(window).resize(function() {
   map.setCenter(prevCenter);
   var wHeight = $(window).height();
@@ -319,6 +269,4 @@ function showPopup()
   clearMap();
   $('#myPopup').popup();
   $('#myPopup').infoWindow("open");
-}
-
 }
