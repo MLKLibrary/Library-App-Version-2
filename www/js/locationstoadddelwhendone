@@ -1,164 +1,340 @@
- /*
-  allMainPageItems = [
-  
-  
-  
+
+
+
+  Rooms["602"] ={x: "37.335723", y: "-121.885126", 
+  contentString:'<div id="content">'+
+  'Study Room 602, 604, 606, 622, 624, 626'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["604"] ={x: "37.335723", y: "-121.885126", 
+  contentString:'<div id="content">'+
+  'Study Room 602, 604, 606, 622, 624, 626'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["606"] ={x: "37.335723", y: "-121.885126", 
+  contentString:'<div id="content">'+
+  'Study Room 602, 604, 606, 622, 624, 626'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["622"] ={x: "37.335723", y: "-121.885126", 
+  contentString:'<div id="content">'+
+  'Study Room 602, 604, 606, 622, 624, 626'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["624"] ={x: "37.335723", y: "-121.885126", 
+  contentString:'<div id="content">'+
+  'Study Room 602, 604, 606, 622, 624, 626'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["626"] ={x: "37.335723", y: "-121.885126", 
+  contentString:'<div id="content">'+
+  'Study Room 602, 604, 606, 622, 624, 626'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+
+  Rooms["632"] ={x: "37.335429", y: "-121.885341",
+  contentString:'<div id="content">'+
+  'Study Room 632, 634, 662, 664'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["634"] ={x: "37.335429", y: "-121.885341",
+  contentString:'<div id="content">'+
+  'Study Room 632, 634, 662, 664'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["662"] ={x: "37.335429", y: "-121.885341",
+  contentString:'<div id="content">'+
+  'Study Room 632, 634, 662, 664'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["664"] ={x: "37.335429", y: "-121.885341",
+  contentString:'<div id="content">'+
+  'Study Room 632, 634, 662, 664'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["702"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["704"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["706"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["722"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["724"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["726"] ={x: "37.335720", y: "-121.885073",
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+
+  Rooms["732"] ={x: "37.335400", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 732, 734, 762, 764'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["734"] ={x: "37.335400", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 732, 734, 762, 764'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["762"] ={x: "37.335400", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 732, 734, 762, 764'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["764"] ={x: "37.335400", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 732, 734, 762, 764'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+
+  Rooms["802"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["804"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["806"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["822"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["824"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["826"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+
+  Rooms["832"] ={x: "37.335397", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 832, 834, 862, 864'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["834"] ={x: "37.335397", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 832, 834, 862, 864'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["862"] ={x: "37.335397", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 832, 834, 862, 864'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["864"] ={x: "37.335397", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 832, 834, 862, 864'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
   
 
-    //1st
-  {children: [{x: "37.335360", y: "-121.885028",  
-  contentString:'<div id="content">' +
-                  '<div><h2 id="firstHeading">Circulation Desk</h2>' +
-                  '<div id="bodyContent">' +
-                  "<div><img src='images/photos/CircDesk-small.jpg' height='100' width='100' align='left'>" +
-                  '<p>Check out materials or get help with your library account.</p></div>' +
-                  '</div>' +
-                  '</div>'},
-
-  {x: "37.335410", y:"-121.884567",
-      contentString: '<div id="content">'+
-      "Classroom 125" +
-      '</div>'}
-  ]},
   
-  //2nd
-  {children: [{x: "37.335538", y: "-121.885172",  
-  contentString:'<div id="content">' +
-                                 '<div><h2 id="firstHeading">Reference Desk</h2>' +
-                                 '</div>' +
-                                 '<div id="content">' +
-                                 "<div><img src='images/photos/RefDesk-small.jpg' height='100' width='100' align='left'>" +
-                                 '<p>Get help with your research needs.</p></div>' +
-                                 '</div>' +
-                                 '</div>'},
   
  
-  {x: "37.335713", y: "-121.885141", 
-    contentString:'<div id="content">'+
-        'Study Room 226'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  {x: "37.335684", y: "-121.885109",
-    contentString:'<div id="content">'+
-        'Study Room 224'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  
-  {x: "37.335410", y: "-121.884567",
-      contentString: '<div id="content">'+
-      "Classroom 213"+
-      '</div>'},
-  {x: "37.335339", y: "-121.884651",
-      contentString: '<div id="content">'+
-      "Classroom 217"+
-      '</div>'},
-  {x: "37.335394", y: "-121.884731",
-      contentString: '<div id="content">'+
-      "Classroom 219"+
-      '</div>'} 
-  ]},
-  
-  //3rd
-  {children: [{x: "37.335538", y: "-121.885172", 
-    contentString:'<div id="content">' +
-                                 '<div><h2 id="firstHeading">Reference Desk</h2>' +
-                                 '<a href="#RefDesk"/a>' +
-                                 '</div>' +
-                                 '<div id="bodyContent">' +
-                                 "<div><img src='images/photos/RefDesk-small.jpg' height='100' width='100' align='left'>" +
-                                 '<p>Get help with your research needs.</p></div>' +
-                                 '</div>' +
-                                 '</div>'},
-  
 
-  {x: "37.335684", y: "-121.885109",
-    contentString:'<div id="content">'+
-        'Study Room 322, 324, 326'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-  {x: "37.335375", y: "-121.885291",
-    contentString:'<div id="content">'+
-        'Study Room 390, 392'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'}
-  ]},
-  
-  //4
-  
-    {x: "37.335374", y: "-121.884808", 
-       contentString:'<div id="content">'+
-        "Student Computing Services"+
-        "<div><img src='images/photos/ComputingServices-small.jpg' height='100' width='100' align='left'>" +
-        "<p>Student Computing Services provides students free access to PC laptops, MacBooks and iPads.</p>" + 
-        '</div>'},
-    {x: "37.335354", y: "-121.884780", 
-       contentString:'<div id="content">'+
-        "Student Technology Training"+
-        "<div><img src='images/photos/TechTraining-small.jpg' height='100' width='100' align='left'>" +
-        "<p>The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>" +
-        '</div>'},
-    {x: "37.335342", y: "-121.884824", 
-       contentString:'<div id="content">'+
-        "Laptops and iPads"+
-        "<img src='images/photos/LaptopsandiPads-small.jpg' height='100' width='100' align='left'>" +
-        "<p>Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.</p>" +
-        '</div>'}
-  ]},
-  
-  //5
-  
-  //6
-  
- 
-  {x: "37.335723", y: "-121.885126", 
-    contentString:'<div id="content">'+
-        'Study Room 602, 604, 606, 622, 624, 626'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-      {x: "37.335429", y: "-121.885341",
-    contentString:'<div id="content">'+
-        'Study Room 632, 634, 662, 664'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'}
-  ]},
-  
-  //7
-  
-  {x: "37.335720", y: "-121.885073", 
-    contentString:'<div id="content">'+
-        'Study Room 702, 704, 706, 722, 724, 726'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-      {x: "37.335400", y: "-121.885358",
-    contentString:'<div id="content">'+
-        'Study Room 732, 734, 762, 764'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'}
-  ]},
-  
-  //8
- 
-  {x: "37.335720", y: "-121.885069", 
-    contentString:'<div id="content">'+
-        'Study Room 802, 804, 806, 822, 824, 826'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'},
-      {x: "37.335397", y: "-121.885358",
-    contentString:'<div id="content">'+
-        'Study Room 832, 834, 862, 864'+
-        "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
-        "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
-        '</div>'}
-  ]}
-  ]};
+  Rooms["632"] ={x: "37.335429", y: "-121.885341",
+  contentString:'<div id="content">'+
+  'Study Room 632, 634, 662, 664'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["634"] ={x: "37.335429", y: "-121.885341",
+  contentString:'<div id="content">'+
+  'Study Room 632, 634, 662, 664'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["662"] ={x: "37.335429", y: "-121.885341",
+  contentString:'<div id="content">'+
+  'Study Room 632, 634, 662, 664'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["664"] ={x: "37.335429", y: "-121.885341",
+  contentString:'<div id="content">'+
+  'Study Room 632, 634, 662, 664'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["702"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["704"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["706"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["722"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["724"] ={x: "37.335720", y: "-121.885073", 
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["726"] ={x: "37.335720", y: "-121.885073",
+  contentString:'<div id="content">'+
+  'Study Room 702, 704, 706, 722, 724, 726'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
 
-  */
+  Rooms["732"] ={x: "37.335400", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 732, 734, 762, 764'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["734"] ={x: "37.335400", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 732, 734, 762, 764'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["762"] ={x: "37.335400", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 732, 734, 762, 764'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["764"] ={x: "37.335400", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 732, 734, 762, 764'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+
+  Rooms["802"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["804"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["806"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["822"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["824"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["826"] ={x: "37.335720", y: "-121.885069", 
+  contentString:'<div id="content">'+
+  'Study Room 802, 804, 806, 822, 824, 826'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+
+  Rooms["832"] ={x: "37.335397", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 832, 834, 862, 864'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["834"] ={x: "37.335397", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 832, 834, 862, 864'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["862"] ={x: "37.335397", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 832, 834, 862, 864'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};
+  Rooms["864"] ={x: "37.335397", y: "-121.885358",
+  contentString:'<div id="content">'+
+  'Study Room 832, 834, 862, 864'+
+  "<img src='images/photos/StudyRooms-small.jpg' height='100' width='100' align='left'>" +
+  "<p><a href='http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room'>Reserve Rooms Online</a></p>" +
+  '</div>'};

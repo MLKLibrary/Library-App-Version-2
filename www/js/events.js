@@ -24,8 +24,20 @@ $(document).bind("pagebeforeshow",function() {
 });
 
 function PopulateEventsTable(eventList) {
-  var tableHTML = "<table data-role='table' class='ui-responsive'><thead><tr><th class='tcell'>Event Name</th><th>Time & Location</th></tr></thead><tbody>";
+  var tableHTML = "<table data-role='table' class='ui-responsive'><thead><tr><th class='tcell'>Event</th><th>Time & Place</th></tr></thead><tbody>";
   for(var i = 0; i<eventList.length; i++) {
+
+
+    
+
+
+
+
+
+
+
+
+    
     var lastClass = i==eventList.length-1?"last":"";
     tableHTML+= "<tr><td class='tcell'>"+eventList[i].Title+"</td><td>"+eventList[i].Location+"</br>"+eventList[i].Time+"</td></tr>";
   }

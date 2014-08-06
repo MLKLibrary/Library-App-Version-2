@@ -107,87 +107,6 @@ var locations = [
   },
 
 
-//Elevators
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: -1,
-    floorname: "Lower Level",
-    x: 37.335531, y: -121.884836
-  },
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 0,
-    floorname: "Mezzanine",
-    x: 37.335712, y: -121.885180, 
-  },
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 1,
-    floorname: "1st Floor",
-    x: 37.335531, y: -121.884836
-  },
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 2,
-    floorname: "2nd Floor",
-    x: 37.335531, y: -121.884836
-  },
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 3,
-    floorname: "3rd Floor",
-    x: 37.335531, y: -121.884836
-  },  
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 4,
-    floorname: "4th Floor",
-    x: 37.335531, y: -121.884836
-  },
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 5,
-    floorname: "5th Floor",
-    x: 37.335531, y: -121.884836
-  },  
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 6,
-    floorname: "6th Floor",
-    x: 37.335531, y: -121.884836
-  },
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 7,
-    floorname: "7th Floor",
-    x: 37.335531, y: -121.884836
-  },
-
-  {
-    type: TYPES.PLACE,
-    name: "Elevators",
-    floor: 8,
-    floorname: "8th Floor",
-    x: 37.335531, y: -121.884836
-  },
-
 //Library Services, Desks, and Areas
 
   //Printing
@@ -543,13 +462,753 @@ var locations = [
       image: "images/photos/StudyRooms-small.jpg",
       linktext: "Reserve Rooms Online",
       linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    }
+
+/*/Books By Collection or Call Number Range
+  //LL
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: -1,
+      floorname: "Lower Level",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
     },
 
-//Books By Collection or Call Number Range
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: -1,
+      floorname: "Lower Level",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: -1,
+      floorname: "Lower Level",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+  //1st Floor
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 1,
+      floorname: "1st Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 1,
+      floorname: "1st Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+  //2nd Floor
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },  
+
+  //3rd Floor
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },  
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },  
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },  
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 3,
+      floorname: "3rd Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+  //5th Floor
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 5,
+      floorname: "5th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+  //6th Floor
   
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 6,
+      floorname: "6th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },  
 
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 6,
+      floorname: "6th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
 
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 6,
+      floorname: "6th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
 
-  ];
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 6,
+      floorname: "6th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 6,
+      floorname: "6th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 6,
+      floorname: "6th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 6,
+      floorname: "6th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+//7th Floor
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7Th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 7,
+      floorname: "7th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+  //8th Floor
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    },
+
+    {
+      type: TYPES.COLLECTION,
+      name: "",
+      floor: 8,
+      floorname: "8th Floor",
+      x: , y: ,
+      desc: "",
+      image: "images/photos/******-small.jpg",
+      linktext: "",
+      linktarget: ""
+    }, */
+
+  ]; 
 
  

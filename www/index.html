@@ -45,9 +45,6 @@
       <h1>SJSU Library</h1>
     </div>
       
-
-
-
 <!--Floor menu-->
     <form>
       <div class="ui-field-contain">
@@ -66,7 +63,7 @@
       </div>
     </form> 
 
-    <!--Book Location Menu-->  
+<!--Book Location Menu-->  
     <form>
       <div class="ui-field-contain">
         <select name="select-native-4" id="select-native-4" data-mini="true">
@@ -115,15 +112,16 @@
 		  <div id="map-canvas">
       </div>
     </div> 
-  
+
+<!--Footer NavBar-->  
     <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
       <div class="ui-grid-d center" data-role="navbar">
         <ul>
+          <li><a href="#home" data-icon="home">Home</a>
+          </li>
           <li><a href="#mainMenu" data-icon="bars">Menu</a>
           </li>
           <li><a href="#win1" data-icon="calendar">Events</a>
-          </li>
-          <li><a href="#home" data-icon="home">Home</a>
           </li>
           <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
           </li>
@@ -236,7 +234,8 @@
           <h3>Mezzanine</h3>
           <p>The Mezzanine is an SJSU student-only space for collaborating, studying, or just relaxing between classes. It is located between the lower level and 1st floor.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Mezzanine</li>
+            <li><a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Mezzanine</a>
+            </li>
           </ul>  
         </div>
         
@@ -257,9 +256,9 @@
           <h3>Library Cards</h3>
           <p>A library card and PIN are needed to borrow items or get access to ebooks and databases. Bring your Tower Card to the Circulation Desk to get a library card.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://library.sjsu.edu/get-library-card/get-library-card-0" class="ui-btn-ui-icon-carat-r">More information on the SJSU Library Website</a>
+            <li><a data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Get help at the Circulation Desk on the 1st Floor.</a>
             </li>
-            <li><a data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-icon-carat-r">Get help at the Circulation Desk on the 1st Floor.</a>
+            <li><a href="http://library.sjsu.edu/get-library-card/get-library-card-0" class="ui-btn ui-btn-icon-right ui-icon-carat-r">More information on the Library Website.</a>
             </li>
           </ul>
         </div>
@@ -295,7 +294,7 @@
           <h3>Find a Librarian</h3>
           <p>There is a librarian for every subject offered at SJSU. </p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons"class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
+            <li><a href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
             </li>
           </ul>
         </div>
@@ -304,21 +303,23 @@
           <h3>Student Technology Training</h3>
           <p> The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all"> More information on SJSU Library Website</a>
+            <li><a href="#home" data-floor="4" data-location="Student Technology Training" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find Student Technology Training on the map.</a></li>
+            <li><a href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> More information on SJSU Library Website</a>
             </li>
           </ul>
         </div>
    
      </div> 
-      
+  
+<!--Footer NavBar--> 
       <div data-role="footer" data-id="foo1" data-theme="b" data-position="fixed" id="footer">
         <div class="ui-grid-d center" data-role="navbar">
           <ul>
+            <li><a href="#home" data-icon="home">Home</a>
+            </li>
             <li><a href="#mainMenu" data-icon="bars">Menu</a>
             </li>
             <li><a href="#win1" data-icon="calendar">Events</a>
-            </li>
-            <li><a href="#home" data-icon="home">Home</a>
             </li>
             <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
             </li>
@@ -448,15 +449,16 @@
   
   <div data-role=popup id='calPopup' data-position-to="origin" class="ui-content">
   </div>
-      
+
+<!--Footer NavBar-->      
     <div data-role="footer" data-id="foo1" data-position="fixed">
       <div class="ui-grid-d center" data-role="navbar">
         <ul>
+          <li><a href="#home" data-icon="home">Home</a>
+          </li>
           <li><a href="#mainMenu" data-icon="bars">Menu</a>
           </li>
           <li><a href="#win1" data-icon="calendar">Events</a>
-          </li>
-          <li><a href="#home" data-icon="home">Home</a>
           </li>
           <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
           </li>
@@ -464,88 +466,7 @@
       </div>
     </div>
   
-  </div>
-
-<!--Events-->
-    <div data-role=page id="win2" data-theme="b" data-add-back-btn="true">
-  <div data-role="header">
-    <h1>Events</h1>
-    <div id="temptest">
-    </div>
-  </div>
-
-  <div data-role=content>
-    <p> Events</p>
-  </div>
-
-    </div><!--/win2-->
-
-
-<!--Find Books-->
-    <div data-role="page" id="findBooks" data-theme="b" data-url="two">
-
-    <div data-role="header">
-        <a href="#home" data-icon="back">Back</a>
-
-        <h1>Main Menu</h1>
-    </div>
-    <!-- /header -->
-
-    <div data-role="content">
-        <div role="main" class="ui-content">
-                <label>Find Books:</label>
-                <ul data-role="listview" data-theme="a" data-filter="true"  data-filter-reveal="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis A - BL');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis A - BL</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis BM');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis BM</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis CJ - DT');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis CJ - DT</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis E - HB');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis E - HB</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis HC - HM');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis HC - HM</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis HC - HM');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis HC - HM</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis HQ - JN');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis HQ - JN</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis JQ');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis JQ</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis LB');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis LB</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis PA - PR');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis PA - PR</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis PR - PZ');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis PR - PZ</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis QD');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis QD</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis R - S');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis R - S</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Thesis TK - Z');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Thesis TK - Z</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Folio N');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Folio N</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Folio G');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Folio G</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Folio F');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Folio F</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Folio A');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Folio A</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Fiction');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Fiction</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Non-fiction');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Non-Fiction</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('J Fiction');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">J Fiction</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('Ethnic Studies');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Ethnic Studies</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('A - JA');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">A - JA</a></li>
-                    <li><a href="#home" onclick="javascript:clearMap();showLocation('JA - Z');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">JA - Z</a></li></ul>
-                <div id="notFound" style="display:none">
-                    <p>The call number was not found.</p>
-                </div>
-            <p>Ex. Thesis A, Folio F</p>
-
-            <p>Don't have a call number?</p>
-            <a href="http://catalog.sjlibrary.org/search/" data-role="button">Search the SJSU Catalog</a>
-        </div>
-
-    </div>
-    <!-- /content -->
-    
-    <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
-      <div class="ui-grid-d center" data-role="navbar">
-        <ul>
-          <li><a href="#mainMenu" data-icon="bars">Menu</a>
-          </li>
-          <li><a href="#win1" data-icon="calendar">Events</a>
-          </li>
-          <li><a href="#home" data-icon="home">Home</a>
-          </li>
-          <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
-          </li>
-        </ul>
-      </div>
-    </div>   
+  </div>  
     
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery.mobile-1.4.2.js"></script>
