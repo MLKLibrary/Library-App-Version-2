@@ -34,9 +34,17 @@ function initialize() {
 
   });
 
+  $('.inapp').on('click', function(e) {
+    var url, ref;
+    e.preventDefault();
+    url = $(this).attr('href');
+    ref = window.open(url, '_blank', 'location=yes');
+  });
+
+
   $('#select-native-2').on('change', function() {
     clearMap();
-    showlocation( this.value ); // or $(this).val()
+    showlocation(this.value); // or $(this).val()
   });
   
   /*top : 37.336030, -121.885133 ... max first, 
@@ -92,7 +100,7 @@ function initialize() {
     imageBounds);
 
   addOverlay();
-  showFloor(1);
+  showlocation(1);
 }
 
 function addOverlay() {
@@ -148,68 +156,6 @@ function timer(floorNum) {
   }
 }
 
-function showFloor(floorNumber){
-
-  try {
-    if(floorNumber == '-1' || floorNumber == 0){
-      historicalOverlay = new google.maps.GroundOverlay(
-        imageDir + '-1-new.PNG',
-        imageBounds);
-      lastFloor = '-1';
-      historicalOverlay.setMap(map);
-    }
-    else if(floorNumber === "0"){
-     historicalOverlay = new google.maps.GroundOverlay(
-      imageDir + '0-new.PNG',
-      imageBounds);
-     historicalOverlay.setMap(map);
-     floorNumber = 1;
-     lastFloor = '0';
-    }
-    else {
-      historicalOverlay = new google.maps.GroundOverlay(
-      imageDir + (floorNumber)+ '-new.PNG',
-      imageBounds);
-      historicalOverlay.setMap(map);
-      lastFloor = ''+floorNumber;
-      floorNumber++;
-    }
-
-    try{
-      floorNumber = floorNumber - 1;	 
-      var i, iMax;
-      for (i = 0, iMax = locations.length; i < iMax; i++) {
-        if (locations[i].floor === floorNumber) {
-
-          var marker = new google.maps.Marker({
-            animation: google.maps.Animation.DROP,
-            position : new google.maps.LatLng(locations[i].x, locations[i].y),
-            title : "marker",
-            map: map,
-            draggable: false
-          });
-
-          marker['infoWindow'] = new google.maps.InfoWindow({
-            content: createContent(locations[i]),
-            maxWidth: 200
-          });
-          google.maps.event.addListener(marker, 'click', function() {
-            try {
-              for(var b = 0; b < markers.length; b++) {
-                var currentMarker = markers[i];
-                currentMarker["infoWindow"].close();
-              }
-            } catch(e){}
-            this['infoWindow'].open(map,this);
-          });
-          markers.push(marker);
-        }
-      }
-    }catch(e){console.log(e);}
-  }catch(e){console.log(e);}
-
-}
-
 function createContent(location){
   var contentString;
   contentString = '<div id="content">';
@@ -223,36 +169,11 @@ function createContent(location){
     contentString += "<p>" + location.desc + "</p>";
   }
   if (location.linkText && location.linkTarget) {
-    contentString += "<p><a href='" + location.linkTarget + "'>" + location.linkText + "</a></p>";
+    contentString += "<p><a href='" + location.linkTarget + "' class='inapp'>" + location.linkText + "</a></p>";
   }
   contentString += '</div>';
   return contentString;
 };
-
-function showLocation(type){
-  var pinInfo = bookNumberIndex[type];
-  historicalOverlay = new google.maps.GroundOverlay(
-    imageDir + (pinInfo.floor)+ '-new.PNG',
-    imageBounds);
-  $.mobile.changePage( "#home", { transition: "slideup"} );
-  clearMap();
-  historicalOverlay.setMap(map);
-  $('#select-native-2').val(floor).selectmenu('refresh');
-  var infowindow = new google.maps.InfoWindow({
-    content: pinInfo.contentString,
-    maxWidth: 200
-  });
-  var newMarker = new google.maps.Marker({animation: google.maps.Animation.DROP,
-    position : new google.maps.LatLng(pinInfo.lat, pinInfo.long),
-    title : "marker",
-    map: map,
-    draggable: false
-  });
-  google.maps.event.addListener(newMarker, 'click', function() {
-    infowindow.open(map, newMarker);
-  });
-  markers.push(newMarker);
-}
 
 $(window).resize(function() {
   map.setCenter(prevCenter);

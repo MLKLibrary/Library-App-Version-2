@@ -118,8 +118,8 @@ var locations = [
     x: 37.335518, y: -121.885094,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linktext: "Learn more about printing in the King Library.",
-    linktarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "Learn more about printing in the King Library.",
+    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
   },
 
   {
@@ -130,8 +130,8 @@ var locations = [
     x: 37.335750, y: -121.885224,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linktext: "Learn more about printing in the King Library.",
-    linktarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "Learn more about printing in the King Library.",
+    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
   },
   
   {
@@ -142,8 +142,8 @@ var locations = [
     x: 37.335567, y: -121.885102,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linktext: "Learn more about printing in the King Library.",
-    linktarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "Learn more about printing in the King Library.",
+    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
   },  
 
   {
@@ -154,8 +154,8 @@ var locations = [
     x: 37.335506, y: -121.885252,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linktext: "Learn more about printing in the King Library.",
-    linktarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "Learn more about printing in the King Library.",
+    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
   },
 
   {
@@ -166,8 +166,8 @@ var locations = [
     x: 37.335375, y: -121.884882,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linktext: "Learn more about printing in the King Library.",
-    linktarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "Learn more about printing in the King Library.",
+    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
   },
 
   //Mezzanine
@@ -179,8 +179,8 @@ var locations = [
       x: 37.335648, y: -121.885165,
       desc: "Student Learning and Research Commons is located above the Children's Room.",
       image: "images/photos/Mezzanine-small.jpg",
-      linktext: "Learn more about the Mezz on the King website.",
-      linktarget: "http://library.sjsu.edu/mezz/sjsu-student-learning-and-research-commons"
+      linkText: "Learn more about the Mezz on the King website.",
+      linkTarget: "http://library.sjsu.edu/mezz/sjsu-student-learning-and-research-commons"
     }, 
       
   //Student Computing Services
@@ -199,7 +199,7 @@ var locations = [
       name: "Student Computing Services - Laptops and iPads",
       floor: 4,
       floorname: "4th Floor",
-      x: 37.335646, y: -121.885103,
+      x: 37.335342, y: -121.884824,
       desc: "Free checkout of PC laptops, MacBook Pros and iPads using your SJSU Tower Card.",
       image: "images/photos/LaptopsandiPads-small.jpg"
     },  
@@ -257,8 +257,8 @@ var locations = [
       x: 37.335776, y: -121.885040,
       desc: "The library has several rooms available for group study.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },  
   
     {
@@ -269,8 +269,8 @@ var locations = [
       x: 37.335801, y: -121.885079,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
   
     {
@@ -281,8 +281,8 @@ var locations = [
       x: 37.335431, y: -121.884799,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
 
   //1st Floor
@@ -294,8 +294,8 @@ var locations = [
       x: 37.335410, y: -121.884567,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
     
   
@@ -308,8 +308,8 @@ var locations = [
       x: 37.335410, y: -121.884567,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
 
     {
@@ -320,8 +320,8 @@ var locations = [
       x: 37.335339, y: -121.884651,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
 
     {
@@ -332,8 +332,8 @@ var locations = [
       x: 37.335394, y: -121.884731,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
 
     {
@@ -344,8 +344,8 @@ var locations = [
       x: 37.335684, y: -121.885109,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
 
     {
@@ -356,8 +356,8 @@ var locations = [
       x: 37.335713, y: -121.885141,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
 
   
@@ -371,8 +371,8 @@ var locations = [
       x: 37.335684, y: -121.885109,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
 
     {
@@ -383,8 +383,8 @@ var locations = [
       x: 37.335375, y: -121.885291,
       desc: "The library has several rooms available for group study projects.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
   
  //6th Floor
@@ -397,8 +397,8 @@ var locations = [
       x: 37.335723, y: -121.885126,
       desc: "The library has several rooms available for group study.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
     
     {
@@ -409,8 +409,8 @@ var locations = [
       x: 37.335429, y: -121.885341,
       desc: "The library has several rooms available for group study.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },    
   
   //7th Floor
@@ -423,8 +423,8 @@ var locations = [
       x: 37.335720, y: -121.885073,
       desc: "The library has several rooms available for group study.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     },
 
     {
@@ -435,8 +435,8 @@ var locations = [
       x: 37.335400, y: -121.885358,
       desc: "The library has several rooms available for group study.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     }, 
 
   //8th Floor
@@ -448,8 +448,8 @@ var locations = [
       x: 37.335720, y: -121.885069,
       desc: "The library has several rooms available for group study.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
     }, 
 
     {
@@ -460,754 +460,706 @@ var locations = [
       x: 37.335397, y: -121.885358,
       desc: "The library has several rooms available for group study.",
       image: "images/photos/StudyRooms-small.jpg",
-      linktext: "Reserve Rooms Online",
-      linktarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
-    }
+      linkText: "Reserve Rooms Online",
+      linkTarget: "http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room"
+    },
 
-/*/Books By Collection or Call Number Range
+//Books By Collection or Call Number Range
   //LL
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Periodicals",
       floor: -1,
       floorname: "Lower Level",
-      x: , y: ,
+      x: 37.335549, y: -121.885019,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Government Publications",
       floor: -1,
       floorname: "Lower Level",
-      x: , y: ,
+      x: 37.335784, y: -121.885217,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
-    },
-
-    {
-      type: TYPES.COLLECTION,
-      name: "",
-      floor: -1,
-      floorname: "Lower Level",
-      x: , y: ,
-      desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
   //1st Floor
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Brandenburg Browsing",
       floor: 1,
       floorname: "1st Floor",
-      x: , y: ,
+      x: 37.335498, y: -121.885285,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Children's Room",
       floor: 1,
       floorname: "1st Floor",
-      x: , y: ,
+      x: 37.335264, y: -121.885131,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
   //2nd Floor
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Reference",
       floor: 2,
       floorname: "2nd Floor",
-      x: , y: ,
+      x: 37.335651, y: -121.885174,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Ready Reference",
       floor: 2,
       floorname: "2nd Floor",
-      x: , y: ,
+      x: 37.335600, y: -121.885053,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },  
+    
+    {
+      type: TYPES.COLLECTION,
+      name: "Reference Songbooks",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335644, y: -121.885022,
+      desc: "",
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
 
   //3rd Floor
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Nonfiction",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335387, y: -121.885187,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },  
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Nonfiction Computer",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335640, y:-121.885227,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },  
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Nonfiction Careers",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335640, y: -121.885227,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },  
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Nonfiction ESL",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x:  37.335723, y: -121.885343,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Fiction",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335402, y: -121.884732,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Nonfiction Learn a Language",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335723, y: -121.885343,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Large Print",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335723, y: -121.885343,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "MLK Collection",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335723, y: -121.885343,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Fiction Paperbacks",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335640, y: -121.885133,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Languages",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335792, y: -121.885017,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Teen Center",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335792, y: -121.885017,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Young Adult Nonfiction",
       floor: 3,
       floorname: "3rd Floor",
-      x: , y: ,
+      x: 37.335723, y: -121.885343,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
-    },
-
-    {
-      type: TYPES.COLLECTION,
-      name: "",
-      floor: 3,
-      floorname: "3rd Floor",
-      x: , y: ,
-      desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
   //5th Floor
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "California Room",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335824, y: -121.885259,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "SJSU Thesis",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335727, y: -121.885326,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Beethoven Center",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335382, y: -121.885269,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Steinbeck Center",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335382, y: -121.885269,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Goldberg",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335340, y: -121.884555,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Special Collections",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335727, y: -121.885326,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Africana Center",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335382, y: -121.885083,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Chicano Center",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335382, y: -121.885083,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Ethnic Studies",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335382, y: -121.885083,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Punjabi Studies",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335382, y: -121.885083,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Jewish Studies",
+      floor: 5,
+      floorname: "5th Floor",
+      x:37.335372, y: -121.885056,
+      desc: "",
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
+
+    /*{
+      type: TYPES.COLLECTION,
+      name: "Portuguese Heritage Collection",
       floor: 5,
       floorname: "5th Floor",
       x: , y: ,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
-    },
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    }, */
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Asian American Center",
       floor: 5,
       floorname: "5th Floor",
-      x: , y: ,
+      x: 37.335230, y: -121.884802,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
-    },
-
-    {
-      type: TYPES.COLLECTION,
-      name: "",
-      floor: 5,
-      floorname: "5th Floor",
-      x: , y: ,
-      desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
-    },
-
-    {
-      type: TYPES.COLLECTION,
-      name: "",
-      floor: 5,
-      floorname: "5th Floor",
-      x: , y: ,
-      desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
-    },
-
-    {
-      type: TYPES.COLLECTION,
-      name: "",
-      floor: 5,
-      floorname: "5th Floor",
-      x: , y: ,
-      desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
-    },
-
-    {
-      type: TYPES.COLLECTION,
-      name: "",
-      floor: 5,
-      floorname: "5th Floor",
-      x: , y: ,
-      desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
   //6th Floor
   
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Theses A-HN",
       floor: 6,
       floorname: "6th Floor",
-      x: , y: ,
+      x: 37.335483,  y: -121.884882,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },  
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "A-BL",
       floor: 6,
       floorname: "6th Floor",
-      x: , y: ,
+      x: 37.335466, y: -121.885282,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "BM-CI",
       floor: 6,
       floorname: "6th Floor",
-      x: , y: ,
+      x: 37.335466, y: -121.885282,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "CJ-DS",
       floor: 6,
       floorname: "6th Floor",
-      x: , y: ,
+      x: 37.335466, y: -121.885282,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "DT-E",
       floor: 6,
       floorname: "6th Floor",
-      x: , y: ,
+      x: 37.335466, y: -121.885282,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "F-HB",
       floor: 6,
       floorname: "6th Floor",
-      x: , y: ,
+      x: 37.335466, y: -121.885282,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "HC-HM",
       floor: 6,
       floorname: "6th Floor",
-      x: , y: ,
+      x: 37.335614, y: -121.885157, 
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
 //7th Floor
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "HQ-HV",
       floor: 7,
       floorname: "7Th Floor",
-      x: , y: ,
+      x: 37.335381, y: -121.884686,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "HW-JN",
       floor: 7,
       floorname: "7th Floor",
-      x: , y: ,
+      x: 37.335408, y: -121.884539,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "JQ-LA",
       floor: 7,
       floorname: "7th Floor",
-      x: , y: ,
+      x: 37.335360, y: -121.885036,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "LB-M",
       floor: 7,
       floorname: "7th Floor",
-      x: , y: ,
+      x: 37.335360, y: -121.885036,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "PA-PN",
       floor: 7,
       floorname: "7th Floor",
-      x: , y: ,
+      x: 37.335471, y: -121.885216,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "PM-PR",
       floor: 7,
       floorname: "7th Floor",
-      x: , y: ,
+      x: 37.335678, y: -121.885231,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "PR-PS",
       floor: 7,
       floorname: "7th Floor",
-      x: , y: ,
+      x: 37.335678, y: -121.885231,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "PT-PZ",
       floor: 7,
       floorname: "7th Floor",
-      x: , y: ,
+      x: 37.335618, y: -121.885082,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Theses HQ-PZ",
       floor: 7,
       floorname: "7th Floor",
-      x: , y: ,
+      x: 37.335493, y: -121.884901,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
   //8th Floor
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Theses Q-Z",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335424, y: -121.884575,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Q-Qd",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335424, y: -121.884575,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "QD-R",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335169, y: -121.884749,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "R-S",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335310, y: -121.884949,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "S-TK",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335650, y: -121.885165,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "TK-TR",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335650, y: -121.885165,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "TR-Z",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335650, y: -121.885165,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Folio A-E",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335650, y: -121.885165,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
     },
 
     {
       type: TYPES.COLLECTION,
-      name: "",
+      name: "Folio F-Z",
       floor: 8,
       floorname: "8th Floor",
-      x: , y: ,
+      x: 37.335650, y: -121.885165,
       desc: "",
-      image: "images/photos/******-small.jpg",
-      linktext: "",
-      linktarget: ""
-    }, */
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    }
 
   ]; 
 

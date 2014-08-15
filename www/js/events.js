@@ -24,25 +24,15 @@ $(document).bind("pagebeforeshow",function() {
 });
 
 function PopulateEventsTable(eventList) {
-  var tableHTML = "<table data-role='table' class='ui-responsive'><thead><tr><th class='tcell'>Event</th><th>Time & Place</th></tr></thead><tbody>";
+  var tableHTML = "";
   for(var i = 0; i<eventList.length; i++) {
 
 
-    
+    tableHTML +=  '<div data-role="collapsible"> <h3>' + eventList[i].Title + '</h3> <p>'+ eventList[i].Location + '<br/>' + eventList[i].Time + '</p> </div>';
 
-
-
-
-
-
-
-
-    
-    var lastClass = i==eventList.length-1?"last":"";
-    tableHTML+= "<tr><td class='tcell'>"+eventList[i].Title+"</td><td>"+eventList[i].Location+"</br>"+eventList[i].Time+"</td></tr>";
   }
-  tableHTML+="</tbody></table>";
-  $("#evtsTable").html(tableHTML);
+  
+  $("#evtsTable").html(tableHTML).trigger("create");
 }
 
 function PopulateEventsCalendar(eventList) {

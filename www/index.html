@@ -9,7 +9,7 @@
       }
       #panel {
         position: absolute;
-        top: 5px;
+        top: 0px;
         left: 50%;
         margin-left: -180px;
         z-index: 5;
@@ -63,55 +63,10 @@
       </div>
     </form> 
 
-<!--Book Location Menu-->  
-    <form>
-      <div class="ui-field-contain">
-        <select name="select-native-4" id="select-native-4" data-mini="true">
-          <option>Library Collections</option>
-            <optgroup label="Lower Level">
-              <option value="1">The 1st Option</option>
-              <option value="2">The 2nd Option</option>
-              <option value="3">The 3rd Option</option>
-              <option value="4">The 4th Option</option>
-          </optgroup>
-            <optgroup label="1st Floor">
-              <option value="5">The 5th Option</option>
-              <option value="6">The 6th Option</option>
-              <option value="7">The 7th Option</option>
-            </optgroup>
-            <optgroup label="2nd Floor">
-                  <option value="5">The 5th Option</option>
-                  <option value="6">The 6th Option</option>
-                  <option value="7">The 7th Option</option>
-              </optgroup>
-              <optgroup label="3rd Floor">
-                  <option value="5">The 5th Option</option>
-                  <option value="6">The 6th Option</option>
-                  <option value="7">The 7th Option</option>
-              </optgroup>
-              <optgroup label="4th Floor">
-                  <option value="5">The 5th Option</option>
-                  <option value="6">The 6th Option</option>
-                  <option value="7">The 7th Option</option>
-              </optgroup>
-              <optgroup label="5th Floor">
-                  <option value="5">The 5th Option</option>
-                  <option value="6">The 6th Option</option>
-                  <option value="7">The 7th Option</option>
-              </optgroup>
-              <optgroup label="6th Floor">
-                  <option value="5">The 5th Option</option>
-                  <option value="6">The 6th Option</option>
-                  <option value="7">The 7th Option</option>
-              </optgroup>
-          </select>
-      </div>
-    </form>
-    
     <div data-role="content">
-		  <div id="map-canvas">
+      <div id="map-canvas">
       </div>
-    </div> 
+    </div>
 
 <!--Footer NavBar-->  
     <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
@@ -141,12 +96,216 @@
 
 	   <div data-role="content">	
       
-      <div data-role="collapsibleset" class="ui-collapsible-set ui-group-theme-a ui-corner-all data-theme-a">
-				
+      <div data-role="collapsibleset" class="ui-collapsible-set ui-group-theme-a ui-corner-all data-theme-a" data-filter="true" data-mini="true">
+
+        <!--Find Books-->
         <div data-role="collapsible">
+          <h3>Find Books</h3>
+          <p>Find books in the SJSU Library collections .</p>
+          
+          <ul data-role="listview" data-theme="a" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            
+            <li class="ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="https://library.sjsu.edu/" class="inapp">Search the SJSU Library Catalog.</a>
+            </li>    
+
+            <!--Lower Level Collections-->
+            <li data-floor="-1" data-type="4" data-location="Periodicals" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home" >Periodicals (Lower Level)</a>
+            </li>
+
+            <li data-floor="-1" data-type="4" data-location="Government Publications" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Government Publications (Lower Level)</a>
+            </li>
+
+            <!--1st Floor Collections-->
+            <li data-floor="1" data-type="4" data-location="Brandenburg Browsing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Brandenburg Browsing(1st Floor)</a>
+            </li>
+
+            <li data-floor="1" data-type="4" data-location="Children's Room" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Children's Room (1st Floor)</a>
+            </li>
+
+            <!--2nd Floor Collections-->
+            <li data-floor="2" data-type="4" data-location="Reference" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Reference (2nd Floor)</a>
+            </li>
+
+            <li data-floor="2" data-type="4" data-location="Ready Reference" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Ready Reference (2nd Floor)</a>
+            </li>
+
+            <li data-floor="2" data-type="4" data-location="Reference Songbooks" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Reference Songbooks (2nd Floor)</a>
+            </li>
+
+            <!--3rd Floor Collections-->
+
+            <li data-floor="3" data-type="4" data-location="Nonfiction" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home" >Nonfiction (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Nonfiction Computer" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Nonfiction Computer (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Nonfiction Careers" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Nonfiction Careers (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Nonfiction ESL" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Nonfiction ESL (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Fiction" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Fiction (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Nonfiction Learn a Language" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Nonfiction Learn a Language (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Large Print" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Large Print (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="MLK Collection" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">MLK Collection (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Fiction Paperbacks" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Fiction Paperbacks(3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Languages" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Languages (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Teen Center" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Teen Center (3rd Floor)</a>
+            </li>
+
+            <li data-floor="3" data-type="4" data-location="Young Adult Nonfiction" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Young Adult Nonfiction (3rd Floor)</a>
+            </li>
+
+            <!--5th Floor Collections-->
+            <li data-floor="5" data-type="4" data-location="Young Adult Nonfiction" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Young Adult Nonfiction (3rd Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="California Room" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">California Room (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="SJSU Thesis" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">SJSU Thesis (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Beethoven Center" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Beethoven Center (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-locatione="Steinbeck Center" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Steinbeck Center (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Goldberg" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Goldberg (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Special Collections" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Special Collections (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Africana Center" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Africana Center (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Chicano Center" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Chicano Center (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Ethnic Studies" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Ethnic Studies (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Punjabi Studies" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Punjabi Studies (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Jewish Studies" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Jewish Studies (5th Floor)</a>
+            </li>
+
+            <li data-floor="5" data-type="4" data-location="Asian American Center" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Asian American Center (5th Floor)</a>
+            </li>
+
+            <!-- <li data-floor="5" data-type="4" data-location="Portuguese Heritage Collection" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Portuguese Heritage Collection (5th Floor)</a>
+            </li> -->
+
+            <!--6th Floor Collections-->
+
+            <li data-floor="6" data-type="4" data-location="Theses A-HN" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Theses A-HN (6th Floor)</a>
+            </li>
+
+            <li data-floor="6" data-type="4" data-location="A-BL" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">A-BL (6th Floor)</a>
+            </li>
+
+            <li data-floor="6" data-type="4" data-location="BM-CI" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">BM-CI (6th Floor)</a>
+            </li>
+
+            <li data-floor="6" data-type="4" data-location="CJ-DS" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">CJ-DS (6th Floor)</a>
+            </li>
+
+            <li data-floor="6" data-type="4" data-location="DT-E" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">DT-E (6th Floor)</a>
+            </li>
+
+            <li data-floor="6" data-type="4" data-location="F-HB" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">F-HB (6th Floor)</a>
+            </li>
+
+            <li data-floor="6" data-type="4" data-locatione="HC-HM" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">HC-HM (6th Floor)</a>
+            </li>
+
+            <!--7th Floor Collections-->
+            <li data-floor="7" data-type="4" data-location="HQ-HV" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">HQ-HV (7th Floor)</a>
+            </li>
+
+            <li data-floor="7" data-type="4" data-location="HW-JN" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">HW-JN (7th Floor)</a>
+            </li>
+
+            <li data-floor="7" data-type="4" data-location="JQ-LA" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">JQ-LA (7th Floor)</a>
+            </li>
+
+            <li data-floor="7" data-type="4" data-location="LB-M" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">LB-M (7th Floor)</a>
+            </li>
+
+            <li data-floor="7" data-type="4" data-location="PA-PN" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">PA-PN (7th Floor)</a>
+            </li>
+
+            <li data-floor="7" data-type="4" data-location="PM-PR" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">PM-PR (7th Floor)</a>
+            </li>
+
+            <li data-floor="7" data-type="4" data-location="PT-PZ" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">PT-PZ (7th Floor)</a>
+            </li>
+
+            <li data-floor="7" data-type="4" data-location="Theses HQ-PZ" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Theses HQ-PZ (7th Floor)</a>
+            </li>
+
+            <li data-floor="7" data-type="4" data-location="HC-HM" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">HC-HM (7th Floor)</a>
+            </li>
+
+            <!--8th Floor Collections-->
+
+            <li data-floor="8" data-type="4" data-location="Theses Q-Z" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Theses Q-Z(8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="Q-QC" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Q-QC (8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="QD" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">QD (8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="QD-" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">QD-(8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="R-S" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">R-S (8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="S-TK" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">S-TK(8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="TK-TR" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">TK-TR (8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="TR-Z" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">TR-Z (8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="Folio A-E" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Folio A-E (8th Floor)</a>
+            </li>
+
+            <li data-floor="8" data-type="4" data-location="Folio F-Z" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Folio F-Z (8th Floor)</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+				<div data-role="collapsible">
           <h3>Find Rooms</h3>
           <p>Find study rooms, classrooms and meeting rooms in the SJSU Library.</p>
           <ul data-role="listview" data-theme="a" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+            <li class="ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room">Reserve a Study Room</a>
+            </li>    
         
             <li data-floor="-1" data-type="3" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Lower Level Rooms</a>
             </li>
@@ -170,6 +329,15 @@
             </li>
           </ul>
         </div>
+
+        <div data-role="collapsible">
+          <h3>24 Hour Live Reference Chat</h3>
+          <p>Use the 24/7 Chat service to get help with questions or research.</p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            <li><a href="http://library.sjsu.edu/ask-librarian/ask-librarian" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find on SJSU Library Website</a>
+            </li>
+          </ul>
+        </div>
 				
         <div data-role="collapsible">
           <h3>Circulation Desk</h3>
@@ -178,38 +346,68 @@
             <li><a href="#home" data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-icon-carat-r">Find the Circulation Desk on the map.</a></li>
           </ul>
         </div>
-				
+
         <div data-role="collapsible">
-          <h3>Reference Desk</h3>
-          <p>The Reference Desk offers help with library collections and research assistance with assignments.</p>
+          <h3>FAQ</h3>
+          <p>Are you looking for something not in this list? Try the Frequently Asked Questions on the library website. You can also email new questions.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li class="ui-first-child">
-                <a href="#home" data-floor="2" data-location="Reference Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a>
+            <li><a href="http://answers.sjlibrary.org/" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Learn more at the SJSU Library Website FAQ.</a>
             </li>
-            <li class="ui-last-child">
-                <a href="#home" data-floor="2" data-location="Reference Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
           </ul>
         </div>
-				
+
         <div data-role="collapsible">
-          <h3>Restrooms</h3>
-          <p>Restrooms are located along the blue wall on each floor of the library.</p>
-          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-            <li class="ui-first-child">
-            <a href="#home" data-floor="-1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a></li>
-            <li><a href="#home" data-floor="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">1st Floor</a></li>
-            <li><a href="#home" data-floor="2" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a></li>
-            <li><a href="#home" data-floor="3" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
-            <li><a href="#home" data-floor="4" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">4th Floor</a></li>
-            <li><a href="#home" data-floor="5" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">5th Floor</a></li>
-            <li><a href="#home" data-floor="6" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">6th Floor</a></li>
-            <li><a href="#home" data-floor="7" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">7th Floor</a></li>
-            <li class="ui-last-child"><a href="#home" data-floor="8" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">8th Floor</a></li>
-          </ul> 
+          <h3>Find a Librarian</h3>
+          <p>There is a librarian for every subject offered at SJSU. </p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            <li><a href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
+            </li>
+          </ul>
+        </div>
+
+        <div data-role="collapsible">
+          <h3>Laptops and iPads</h3>
+          <p>Student Computing Services provides students free access to PC laptops, MacBooks and iPads. They are located on the 4th floor. You can also check out iPads and laptops on the Mezzanine.</p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            <li><a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find the check out station on the Mezzanine.</a>
+            </li>
+            <li><a href="#home" data-floor="4" data-location="Student Computing Services - Laptops and iPads" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find Student Computing Services on the 4th Floor.</a>
+            </li>
+            <li><a href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More about Student Computing Services on the SJSU Library website.</a>
+            </li>
+          </ul>  
         </div>
         
         <div data-role="collapsible">
-          <h3>Printing, Scanning, and Copying</h3>
+          <h3>Library Cards</h3>
+          <p>A library card and PIN are needed to borrow items or get access to ebooks and databases. Bring your Tower Card to the Circulation Desk to get a library card.</p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            <li><a href="#home" data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Get help at the Circulation Desk on the 1st Floor.</a>
+            </li>
+            <li><a href="http://library.sjsu.edu/get-library-card/get-library-card-0" class="ui-btn ui-btn-icon-right ui-icon-carat-r">More information on the Library Website.</a>
+            </li>
+          </ul>
+        </div>
+
+        <div data-role="collapsible">
+          <h3>Library Hours</h3>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            <li><a href="https://library.sjsu.edu/library-hours/library-hours" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Hours are listed on the SJSU Library website.</a>
+            </li>
+          </ul>
+        </div>
+
+        <div data-role="collapsible">
+          <h3>Mezzanine</h3>
+          <p>The Mezzanine is an SJSU student-only space for collaborating, studying, or just relaxing between classes. It is located between the lower level and 1st floor.</p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
+            <li><a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Mezzanine</a>
+            </li>
+          </ul>  
+        </div>
+
+        <div data-role="collapsible">
+          <h3>Printing</h3>
           <p>You can print from any library computer, USB, or laptop. Printing stations can be found on the lower level, 1st floor, 2nd floor, and 5th floor.</p>
           <ul data-role="listview" data-theme="a" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             <li class="ui-first-child">
@@ -229,81 +427,48 @@
             </li>
           </ul>  
         </div>
-        
+				
         <div data-role="collapsible">
-          <h3>Mezzanine</h3>
-          <p>The Mezzanine is an SJSU student-only space for collaborating, studying, or just relaxing between classes. It is located between the lower level and 1st floor.</p>
+          <h3>Reference Desk</h3>
+          <p>The Reference Desk offers help with library collections and research assistance with assignments.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Mezzanine</a>
-            </li>
-          </ul>  
-        </div>
-        
-        <div data-role="collapsible">
-          <h3>Student Computing Services - Laptops and iPads</h3>
-          <p>Student Computing Services provides students free access to PC laptops, MacBooks and iPads. They are located on the 4th floor. You can also check out iPads and laptops on the Mezzanine.</p>
-          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find the check out station on the Mezzanine.</a>
-            </li>
-            <li><a href="#home" data-floor="4" data-location="Student Computing Services - Laptops and iPads" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find Student Computing Services on the 4th Floor.</a>
-            </li>
-            <li><a href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More about Student Computing Services on the SJSU Library website.</a>
-            </li>
-          </ul>  
-        </div>
-        
-        <div data-role="collapsible">
-          <h3>Library Cards</h3>
-          <p>A library card and PIN are needed to borrow items or get access to ebooks and databases. Bring your Tower Card to the Circulation Desk to get a library card.</p>
-          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Get help at the Circulation Desk on the 1st Floor.</a>
-            </li>
-            <li><a href="http://library.sjsu.edu/get-library-card/get-library-card-0" class="ui-btn ui-btn-icon-right ui-icon-carat-r">More information on the Library Website.</a>
+            <li class="ui-first-child">
+                <a href="#home" data-floor="2" data-location="Reference Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a>
             </li>
           </ul>
         </div>
 
         <div data-role="collapsible">
-          <h3>Library FAQ</h3>
-          <p>Are you looking for something not in this list? Try the Frequently Asked Questions on the library website. You can also email new questions.</p>
-          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://answers.sjlibrary.org/" class="ui-btn ui-mini ui-btn-inline ui-corner-all">SJSU Library Website FAQ</a>
-            </li>
-          </ul>
-        </div>
-
-        <div data-role="collapsible">
-          <h3>24 Hour Live Reference Chat</h3>
-          <p>Use the 24/7 Chat service to get help with questions or research.</p>
-          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://library.sjsu.edu/ask-librarian/ask-librarian" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find on SJSU Library Website</a>
-            </li>
-          </ul>
-        </div>
-
-        <div data-role="collapsible">
-          <h3>Research Guides by Subject</h3>
+          <h3>Research Guides</h3>
           <p>Research Guides list books, databases and online tools for all departments and many individual courses.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             <li><a href="http://libguides.sjsu.edu/index" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More information on SJSU Library Website</a>
             </li>
           </ul>
         </div>
-
+				
         <div data-role="collapsible">
-          <h3>Find a Librarian</h3>
-          <p>There is a librarian for every subject offered at SJSU. </p>
-          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
-            </li>
-          </ul>
+          <h3>Restrooms</h3>
+          <p>Restrooms are located along the blue wall on each floor of the library.</p>
+          <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+            <li class="ui-first-child">
+            <a href="#home" data-floor="-1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a></li>
+            <li><a href="#home" data-floor="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">1st Floor</a></li>
+            <li><a href="#home" data-floor="2" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a></li>
+            <li><a href="#home" data-floor="3" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
+            <li><a href="#home" data-floor="4" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">4th Floor</a></li>
+            <li><a href="#home" data-floor="5" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">5th Floor</a></li>
+            <li><a href="#home" data-floor="6" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">6th Floor</a></li>
+            <li><a href="#home" data-floor="7" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">7th Floor</a></li>
+            <li class="ui-last-child"><a href="#home" data-floor="8" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">8th Floor</a></li>
+          </ul> 
         </div>
 
         <div data-role="collapsible">
-          <h3>Student Technology Training</h3>
+          <h3>Technology Training</h3>
           <p> The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="#home" data-floor="4" data-location="Student Technology Training" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find Student Technology Training on the map.</a></li>
+            <li><a href="#home" data-floor="4" data-location="Student Technology Training" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find the Technology Training Center on the map.</a></li>
             <li><a href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> More information on SJSU Library Website</a>
             </li>
           </ul>
@@ -331,95 +496,6 @@
 	</div><!-- /content -->
 
   </div><!--/mainMenu-->
-
-<!--Rooms by number-->
-  <div data-role="page" id="findRoomByNumber" data-theme="b" data-url="two">
-
-	<div data-role="header">
-	 <a href="#home" data-icon="back">Back</a>
-	 <h1>Find Rooms by Room Number</h1>
-	</div>
-
-	<div data-role="content">	
-	 <ul data-role="listview" data-theme="a" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-				
-				<li class="ui-first-child ui-last-child">
-				<a href="#home" onclick="javascript:clearMap();RoomByNumber('L02');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L02</a></li>
-				
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L04');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L04</a></li>
-				
-        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('L67');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">L67</a></li>
-				
-        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('125');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">125</a></li>
-
-        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('213');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">213</a></li>
-        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('217');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">217</a></li>
-        <li><a href="#home" onclick="javascript:clearMap();RoomByNumber('219');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">219</a></li>
-
-
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('224');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">224</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('226');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">226</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('322');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">322</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('324');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">324</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('326');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">326</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('390');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">390</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('392');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">392</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('602');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">602</a></li>
-				
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('604');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">604</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('606');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">606</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('622');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">622</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('624');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">624</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('626');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">626</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('632');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">632</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('634');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">634</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('662');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">662</a></li>
-				
-				
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('664');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">664</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('702');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">702</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('704');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">704</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('706');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">706</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('722');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">722</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('724');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">724</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('726');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">726</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('732');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">732</a></li>
-				
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('734');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">734</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('762');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">762</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('764');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">764</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('802');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">802</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('804');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">804</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('806');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">806</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('822');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">822</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('824');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">824</a></li>
-				
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('826');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">826</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('832');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">832</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('834');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">834</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('862');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">862</a></li>
-				<li><a href="#home" onclick="javascript:clearMap();RoomByNumber('864');" class="ui-btn ui-btn-icon-right ui-icon-carat-r">864</a></li>
-
-			</ul>
-			
-	</div><!-- /content -->
-  
-  <div data-role="footer" data-id="foo1" data-position="fixed" id="footer">
-    <div class="ui-grid-d center" data-role="navbar">
-      <ul>
-        <li><a href="#mainMenu" data-icon="bars">Menu</a>
-        </li>
-        <li><a href="#win1" data-icon="calendar">Events</a>
-        </li>
-        <li><a href="#home" data-icon="home">Home</a>
-        </li>
-        <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
-        </li>
-      </ul>
-    </div>
-	</div>
-
-  </div><!--Rooms by number-->
   
 <!--Events-->
   <div data-role=page id="win1" data-theme="b" data-url="two">
@@ -427,10 +503,11 @@
     
 
     <div data-role="header">
+      <a href="#home" data-icon="back">Back
+      </a>
       <h1>SJSU Library</h1>
     </div>
-    <a href="#home" data-icon="back">Back
-    </a>
+   
   
     <div data-role=table>
       <div id="jMonthCalendar"  style="display:none; width:100%">
