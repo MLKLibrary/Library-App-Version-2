@@ -8,7 +8,9 @@ Build and install on an Android device
 6. phonegap install android
 
 Build and install on an iOS device
-1. get phonegap installed on your mac and do whatever other nonsensical mac activities might be necessary. Once you figure it out, update this README.
+
+1. get phonegap installed on your mac and do whatever other nonsensical mac activities might be necessary. 
+Once you figure it out, update this README.
 2. mkdir .cordova platform plugins
 3. phonegap plugin add org.apache.cordova.inappbrowser
 4. phonegap build ios
