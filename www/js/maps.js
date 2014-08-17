@@ -66,7 +66,8 @@ function initialize() {
 
   var mapOptions = {
     zoom: 20,
-    center: mlkLibraryGPSCoord
+    center: mlkLibraryGPSCoord,
+  disableDefaultUI: true
   };
 
   map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -80,17 +81,17 @@ function initialize() {
   google.maps.event.addListener(map,'dragend',function(event) {
     prevCenter = map.center;
     if(!imageBounds.contains(map.center)) {
-      map.panToBounds(imageBounds);
+        map.panTo(mlkLibraryGPSCoord);
     }
 
   });
   google.maps.event.addListener(map,'center_changed',function(event) {
     if(!imageBounds.contains(map.center))
-      map.panToBounds(imageBounds);
+      map.panTo(mlkLibraryGPSCoord);
   });
   google.maps.event.addListener(map, 'zoom_changed', function(event) {
 	  if (!imageBounds.contains(map.center)) {
-		  map.panToBounds(imageBounds);
+		  map.panTo(mlkLibraryGPSCoord);
 	  }
 	  if (map.getZoom() < 19) {
 		  map.setZoom(19);
