@@ -31,8 +31,10 @@
   <link rel=stylesheet href="css/SJSULibraryApp.min.css" />
   
   <!-- Google Api V3 Declaration -->    
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-  <!-- End of Google Api V3 Declaration -->  
+  <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+  <!-- End of Google Api V3 Declaration -->
+  
+  <script src="phonegap.js"></script>
 
 </head>
 
@@ -46,22 +48,18 @@
     </div>
       
 <!--Floor menu-->
-    <form>
-      <div class="ui-field-contain">
-        <select name="select-native-2" id="select-native-2" data-mini="true">
-          <option value="-1">Lower Level</option>
-          <option value="0">Mezzanine</option>
-          <option value="1" selected>1st Floor</option>
-          <option value="2">2nd Floor</option>
-          <option value="3">3rd Floor</option>
-          <option value="4">4th Floor</option>
-          <option value="5">5th Floor</option>
-          <option value="6">6th Floor</option>
-          <option value="7">7th Floor</option>
-          <option value="8">8th Floor</option>
-        </select>
-      </div>
-    </form> 
+    <select name="select-native-2" id="select-native-2" data-mini="true">
+      <option value="-1">Lower Level</option>
+      <option value="0">Mezzanine</option>
+      <option value="1" selected>1st Floor</option>
+      <option value="2">2nd Floor</option>
+      <option value="3">3rd Floor</option>
+      <option value="4">4th Floor</option>
+      <option value="5">5th Floor</option>
+      <option value="6">6th Floor</option>
+      <option value="7">7th Floor</option>
+      <option value="8">8th Floor</option>
+    </select>
 
     <div data-role="content">
       <div id="map-canvas">
@@ -78,7 +76,7 @@
           </li>
           <li><a href="#win1" data-icon="calendar">Events</a>
           </li>
-          <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+          <li><a class="inAppLink" href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
           </li>
         </ul>
       </div>	
@@ -105,7 +103,7 @@
           
           <ul data-role="listview" data-theme="a" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             
-            <li class="ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="https://library.sjsu.edu/" class="inapp">Search the SJSU Library Catalog.</a>
+            <li class="ui-btn ui-btn-icon-right ui-icon-carat-r"> <a class="inAppLink" href="https://library.sjsu.edu/">Search the SJSU Library Catalog.</a>
             </li>    
 
             <!--Lower Level Collections-->
@@ -304,7 +302,7 @@
           <h3>Find Rooms</h3>
           <p>Find study rooms, classrooms and meeting rooms in the SJSU Library.</p>
           <ul data-role="listview" data-theme="a" data-filter="true" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-            <li class="ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room">Reserve a Study Room</a>
+            <li class="ui-btn ui-btn-icon-right ui-icon-carat-r"> <a class="inAppLink" href="http://library.sjsu.edu/reserve-studymeeting-room/reserve-studymeeting-room">Reserve a Study Room</a>
             </li>    
         
             <li data-floor="-1" data-type="3" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">Lower Level Rooms</a>
@@ -334,7 +332,7 @@
           <h3>24 Hour Live Reference Chat</h3>
           <p>Use the 24/7 Chat service to get help with questions or research.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://library.sjsu.edu/ask-librarian/ask-librarian" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find on SJSU Library Website</a>
+            <li><a class="inAppLink" href="http://library.sjsu.edu/ask-librarian/ask-librarian" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find on SJSU Library Website</a>
             </li>
           </ul>
         </div>
@@ -351,7 +349,7 @@
           <h3>FAQ</h3>
           <p>Are you looking for something not in this list? Try the Frequently Asked Questions on the library website. You can also email new questions.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://answers.sjlibrary.org/" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Learn more at the SJSU Library Website FAQ.</a>
+            <li><a class="inAppLink" href="http://answers.sjlibrary.org/" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Learn more at the SJSU Library Website FAQ.</a>
             </li>
           </ul>
         </div>
@@ -360,7 +358,7 @@
           <h3>Find a Librarian</h3>
           <p>There is a librarian for every subject offered at SJSU. </p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
+            <li><a class="inAppLink" href="http://library.sjsu.edu/sjsu-library-staff-directory/sjsu-library-subject-liaisons" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Find your subject librarian on the SJSU Library website.</a>
             </li>
           </ul>
         </div>
@@ -373,7 +371,7 @@
             </li>
             <li><a href="#home" data-floor="4" data-location="Student Computing Services - Laptops and iPads" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find Student Computing Services on the 4th Floor.</a>
             </li>
-            <li><a href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More about Student Computing Services on the SJSU Library website.</a>
+            <li><a class="inAppLink" href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More about Student Computing Services on the SJSU Library website.</a>
             </li>
           </ul>  
         </div>
@@ -384,7 +382,7 @@
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             <li><a href="#home" data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Get help at the Circulation Desk on the 1st Floor.</a>
             </li>
-            <li><a href="http://library.sjsu.edu/get-library-card/get-library-card-0" class="ui-btn ui-btn-icon-right ui-icon-carat-r">More information on the Library Website.</a>
+            <li><a class="inAppLink" href="http://library.sjsu.edu/get-library-card/get-library-card-0" class="ui-btn ui-btn-icon-right ui-icon-carat-r">More information on the Library Website.</a>
             </li>
           </ul>
         </div>
@@ -392,7 +390,7 @@
         <div data-role="collapsible">
           <h3>Library Hours</h3>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="https://library.sjsu.edu/library-hours/library-hours" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Hours are listed on the SJSU Library website.</a>
+            <li><a class="inAppLink" href="https://library.sjsu.edu/library-hours/library-hours" class="ui-btn ui-mini ui-btn-inline ui-corner-all">Hours are listed on the SJSU Library website.</a>
             </li>
           </ul>
         </div>
@@ -442,7 +440,7 @@
           <h3>Research Guides</h3>
           <p>Research Guides list books, databases and online tools for all departments and many individual courses.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="http://libguides.sjsu.edu/index" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More information on SJSU Library Website</a>
+            <li><a class="inAppLink" href="http://libguides.sjsu.edu/index" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More information on SJSU Library Website</a>
             </li>
           </ul>
         </div>
@@ -469,7 +467,7 @@
           <p> The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>
           <ul data-role="listview" data-theme="a" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             <li><a href="#home" data-floor="4" data-location="Student Technology Training" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Find the Technology Training Center on the map.</a></li>
-            <li><a href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> More information on SJSU Library Website</a>
+            <li><a class="inAppLink" href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> More information on SJSU Library Website</a>
             </li>
           </ul>
         </div>
@@ -486,7 +484,7 @@
             </li>
             <li><a href="#win1" data-icon="calendar">Events</a>
             </li>
-            <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+            <li><a class="inAppLink" href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
             </li>
           </ul>
         </div>
@@ -537,7 +535,7 @@
           </li>
           <li><a href="#win1" data-icon="calendar">Events</a>
           </li>
-          <li><a href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
+          <li><a class="inAppLink" href="http://library.sjsu.edu" data-icon="action">SJSU Library Website</a>
           </li>
         </ul>
       </div>
@@ -547,7 +545,7 @@
     
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery.mobile-1.4.2.js"></script>
-    <script src="js/bookNumberIndex.js"></script>
+    <!--<script src="js/bookNumberIndex.js"></script>-->
     <script src="js/index.js"></script>
     <script src="js/jMonthCalendar.js"></script>
     <script src="js/events.js"></script>
