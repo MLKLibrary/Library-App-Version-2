@@ -25,7 +25,7 @@ function clearMap(){
   markers.length=0;
 }
 
-function initialize() {
+$(function() {
   
   $('.pintap').on('click', function() {
     clearMap();
@@ -67,13 +67,13 @@ function initialize() {
   var mapOptions = {
     zoom: 20,
     center: mlkLibraryGPSCoord,
-  disableDefaultUI: true
+    disableDefaultUI: true
   };
 
   map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
   var wHeight = $(document).height();
-  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-36;
+  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-80;
   $("#map-canvas").css("height", mapHeight);
   
   google.maps.event.trigger(map, "resize");
@@ -104,7 +104,7 @@ function initialize() {
 
   addOverlay();
   showFloorLocations(1);
-}
+});
 
 function addOverlay() {
   floorOverlay.setMap(map);
@@ -114,89 +114,58 @@ function removeOverlay() {
   floorOverlay.setMap(null);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-
-function showFloorLocations(floorNumber) {
+function showFloorLocations(floorNumber, locationName, locationType) {
+	var matchingMarker = null;
 	$('#select-native-2').val(floorNumber).selectmenu('refresh');
 	floorOverlay = new google.maps.GroundOverlay(imageDir + (floorNumber)
 			+ '-new.PNG', imageBounds);
 	floorOverlay.setMap(map);
-	try{	      
-	    for (i = 0, iMax = locations.length; i < iMax; i++) {
-	      if (locations[i].floor == floorNumber) {
-	    	var locationPosition = new google.maps.LatLng(locations[i].x, locations[i].y)
-	        var marker = new google.maps.Marker(
-	        		{
-	        			animation: google.maps.Animation.DROP,
-	        			position : locationPosition,
-	        			title : "marker",
-	        			map: map,
-	        			draggable: false
-	        		});
-	        marker['infoWindow'] = new google.maps.InfoWindow({
-	          content: createContent(locations[i]),
-	          maxWidth: 200,
-	          disableAutoPan: true
-	        });
-	        google.maps.event.addListener(marker, 'click', function() {
-	        	map.panTo(this.getPosition());
-	        	try {
-	        		for(var b = 0; b < markers.length; b++) {
-	        			var currentMarker = markers[b];
-	        			currentMarker["infoWindow"].close();
-	        		}
-	        	} catch(e){}
-	        	this['infoWindow'].open(map,this);
-	         });
-	        markers.push(marker);
-	      }
-	    }
-	  }catch(e){ console.log(e); }
+	try {
+		for (i = 0, iMax = locations.length; i < iMax; i++) {
+			if (locations[i].floor == floorNumber) {
+				var locationPosition = new google.maps.LatLng(locations[i].x,
+						locations[i].y)
+				var marker = new google.maps.Marker({
+					animation : google.maps.Animation.DROP,
+					position : locationPosition,
+					title : "marker",
+					map : map,
+					draggable : false
+				});
+				marker['infoWindow'] = new google.maps.InfoWindow({
+					content : createContent(locations[i]),
+					maxWidth : 200,
+					disableAutoPan : true
+				});
+				google.maps.event.addListener(marker, 'click', function() {
+					map.panTo(this.getPosition());
+					try {
+						for (var b = 0; b < markers.length; b++) {
+							var currentMarker = markers[b];
+							currentMarker["infoWindow"].close();
+						}
+					} catch (e) {
+					}
+					this['infoWindow'].open(map, this);
+				});
+				markers.push(marker);
+				if ((!locationName || locationName === locations[i].name)
+						&& (!locationType || locationType === locations[i].type)) {
+					matchingMarker = marker;
+				}
+			}
+		}
+	} catch (e) {
+		console.log(e);
+	}
+	return matchingMarker;
 }
 
 function showLocation(floorNumber, locationName, locationType){
-  $('#select-native-2').val(floorNumber).selectmenu('refresh');
-  floorOverlay = new google.maps.GroundOverlay(
-    imageDir + (floorNumber)+ '-new.PNG',
-    imageBounds);
-  floorOverlay.setMap(map);
-  try{
-	var matchingLocation = null;
-    for (i = 0, iMax = locations.length; i < iMax; i++) {
-      if ((!locationName || locations[i].name === locationName) && (!locationType || locations[i].type == locationType) && locations[i].floor == floorNumber) {
-    	  matchingLocation = locations[i];
-    	  break;
-      }
-    }
-    
-    var locationPosition = new google.maps.LatLng(matchingLocation.x, matchingLocation.y)
-    var marker = new google.maps.Marker({
-    	animation: google.maps.Animation.DROP,
-        position : locationPosition,
-        title : "marker",
-        map: map,
-        draggable: false
-    });
-    marker['infoWindow'] = new google.maps.InfoWindow({
-    	content: createContent(matchingLocation),
-    	maxWidth: 200,
-        disableAutoPan: true
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-    	map.panTo(this.getPosition());
-    	try {
-    		for(var b = 0; b < markers.length; b++) {
-    			var currentMarker = markers[b];
-    			currentMarker["infoWindow"].close();
-    		}
-    	} catch(e){}
-    	this['infoWindow'].open(map,this);
-    });
-    markers.push(marker);
-    setTimeout(function() {
-    	google.maps.event.trigger(marker, 'click');
-    }, 500);
-  }catch(e){ console.log(e); }
+	var marker = showFloorLocations(floorNumber, locationName, locationType);
+	setTimeout(function() {
+		google.maps.event.trigger(marker, 'click');
+	}, 500);
 }
 
 function createContent(location){
@@ -225,7 +194,7 @@ $(window).resize(function() {
 	  map.panTo(prevCenter);
   }
   var wHeight = $(window).height();
-  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-36;
+  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-80;
   $('#map-canvas').css('height', mapHeight);
   google.maps.event.trigger(map, "resize");
 
