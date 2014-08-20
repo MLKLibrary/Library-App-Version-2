@@ -25,6 +25,7 @@ function clearMap(){
   markers.length=0;
 }
 
+<<<<<<< HEAD
 
 function buildMenuList(type) {
   var i, iMax, listHtml = '';
@@ -37,6 +38,9 @@ function buildMenuList(type) {
 }
 
 function initialize() {
+=======
+$(function() {
+>>>>>>> 0c8ee970d55001a38ddb8ca73fa3b8480bfdf98e
   
   $('#roomMenuList').append(buildMenuList(TYPES.ROOM));
   $('#collectionMenuList').append(buildMenuList(TYPES.COLLECTION));
@@ -44,21 +48,19 @@ function initialize() {
   $('.pintap').on('click', function() {
     clearMap();
     var $this = $(this);
-    showlocation($this.data('floor'), $this.data('location'), $this.data('type'));
+    showLocation($this.data('floor'), $this.data('location'), $this.data('type'));
 
   });
 
-  $('.inapp').on('click', function(e) {
-    var url, ref;
-    e.preventDefault();
-    url = $(this).attr('href');
-    ref = window.open(url, '_blank', 'location=yes');
+  $('.inAppLink').on('click', function(e) {
+    window.open($(this).attr('href'), '_blank', 'location=yes');
+    return false;
   });
 
 
   $('#select-native-2').on('change', function() {
     clearMap();
-    showlocation(this.value); // or $(this).val()
+    showFloorLocations(this.value); // or $(this).val()
   });
 
 
@@ -85,13 +87,14 @@ function initialize() {
 
   var mapOptions = {
     zoom: 20,
-    center: mlkLibraryGPSCoord
+    center: mlkLibraryGPSCoord,
+    disableDefaultUI: true
   };
 
   map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
   var wHeight = $(document).height();
-  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-36;
+  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-80;
   $("#map-canvas").css("height", mapHeight);
   
   google.maps.event.trigger(map, "resize");
@@ -99,6 +102,7 @@ function initialize() {
   google.maps.event.addListener(map,'dragend',function(event) {
     prevCenter = map.center;
     if(!imageBounds.contains(map.center)) {
+<<<<<<< HEAD
       map.panToBounds(new google.maps.LatLngBounds(mlkLibraryGPSCoord, mlkLibraryGPSCoord));
     }
 
@@ -110,23 +114,42 @@ function initialize() {
 
   function AlertPos (map, location) { 
   }
+=======
+        map.panTo(mlkLibraryGPSCoord);
+    }
 
-  historicalOverlay = new google.maps.GroundOverlay(
+  });
+  google.maps.event.addListener(map,'center_changed',function(event) {
+    if(!imageBounds.contains(map.center))
+      map.panTo(mlkLibraryGPSCoord);
+  });
+  google.maps.event.addListener(map, 'zoom_changed', function(event) {
+	  if (!imageBounds.contains(map.center)) {
+		  map.panTo(mlkLibraryGPSCoord);
+	  }
+	  if (map.getZoom() < 19) {
+		  map.setZoom(19);
+	  }
+  });
+>>>>>>> 0c8ee970d55001a38ddb8ca73fa3b8480bfdf98e
+
+  floorOverlay = new google.maps.GroundOverlay(
     imageDir + '1-new.PNG',
     imageBounds);
 
   addOverlay();
-  showlocation(1);
-}
+  showFloorLocations(1);
+});
 
 function addOverlay() {
-  historicalOverlay.setMap(map);
+  floorOverlay.setMap(map);
 }
 
 function removeOverlay() {
-  historicalOverlay.setMap(null);
+  floorOverlay.setMap(null);
 }
 
+<<<<<<< HEAD
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
@@ -162,15 +185,60 @@ function showlocation(floorNumber, locationName, locationType){
       }
     }
   }catch(e){}
+=======
+function showFloorLocations(floorNumber, locationName, locationType) {
+	var matchingMarker = null;
+	$('#select-native-2').val(floorNumber).selectmenu('refresh');
+	floorOverlay = new google.maps.GroundOverlay(imageDir + (floorNumber)
+			+ '-new.PNG', imageBounds);
+	floorOverlay.setMap(map);
+	try {
+		for (i = 0, iMax = locations.length; i < iMax; i++) {
+			if (locations[i].floor == floorNumber) {
+				var locationPosition = new google.maps.LatLng(locations[i].x,
+						locations[i].y)
+				var marker = new google.maps.Marker({
+					animation : google.maps.Animation.DROP,
+					position : locationPosition,
+					title : "marker",
+					map : map,
+					draggable : false
+				});
+				marker['infoWindow'] = new google.maps.InfoWindow({
+					content : createContent(locations[i]),
+					maxWidth : 200,
+					disableAutoPan : true
+				});
+				google.maps.event.addListener(marker, 'click', function() {
+					map.panTo(this.getPosition());
+					try {
+						for (var b = 0; b < markers.length; b++) {
+							var currentMarker = markers[b];
+							currentMarker["infoWindow"].close();
+						}
+					} catch (e) {
+					}
+					this['infoWindow'].open(map, this);
+				});
+				markers.push(marker);
+				if ((!locationName || locationName === locations[i].name)
+						&& (!locationType || locationType === locations[i].type)) {
+					matchingMarker = marker;
+				}
+			}
+		}
+	} catch (e) {
+		console.log(e);
+	}
+	return matchingMarker;
+>>>>>>> 0c8ee970d55001a38ddb8ca73fa3b8480bfdf98e
 }
-function timer(floorNum) {
-  if(lastFloor !== floorNum ) { 
-   clearMap();
-    if(floorNum === '-1')
-      showFloor('0');
-    else
-      showFloor(floorNum);
-  }
+
+function showLocation(floorNumber, locationName, locationType){
+	var marker = showFloorLocations(floorNumber, locationName, locationType);
+	setTimeout(function() {
+		google.maps.event.trigger(marker, 'click');
+	}, 500);
 }
 
 
@@ -178,7 +246,7 @@ function createContent(location){
   var contentString;
   contentString = '<div id="content">';
   if (location.name) {
-    contentString += location.name;
+    contentString += "<p>" + location.name + "</p>";
   }
   if (location.image) {
     contentString += "<img src='" + location.image + "' height='100' width='100' align='left'>";
@@ -194,17 +262,18 @@ function createContent(location){
 };
 
 $(window).resize(function() {
-  map.setCenter(prevCenter);
+  if (prevCenter == null) {
+	  map.panTo(mlkLibraryGPSCoord);
+  } else {
+	  map.panTo(prevCenter);
+  }
   var wHeight = $(window).height();
+<<<<<<< HEAD
   var mapHeight = wHeight - $('#header').height() - $('#footer').height()-36;
+=======
+  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-80;
+>>>>>>> 0c8ee970d55001a38ddb8ca73fa3b8480bfdf98e
   $('#map-canvas').css('height', mapHeight);
   google.maps.event.trigger(map, "resize");
 
 });
-
-function showPopup()
-{
-  clearMap();
-  $('#myPopup').popup();
-  $('#myPopup').infoWindow("open");
-}
