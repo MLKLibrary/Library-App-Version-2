@@ -25,8 +25,6 @@ function clearMap(){
   markers.length=0;
 }
 
-<<<<<<< HEAD
-
 function buildMenuList(type) {
   var i, iMax, listHtml = '';
   for (i = 0, iMax = locations.length; i < iMax; i++) {
@@ -37,10 +35,7 @@ function buildMenuList(type) {
   return listHtml;
 }
 
-function initialize() {
-=======
 $(function() {
->>>>>>> 0c8ee970d55001a38ddb8ca73fa3b8480bfdf98e
   
   $('#roomMenuList').append(buildMenuList(TYPES.ROOM));
   $('#collectionMenuList').append(buildMenuList(TYPES.COLLECTION));
@@ -102,19 +97,6 @@ $(function() {
   google.maps.event.addListener(map,'dragend',function(event) {
     prevCenter = map.center;
     if(!imageBounds.contains(map.center)) {
-<<<<<<< HEAD
-      map.panToBounds(new google.maps.LatLngBounds(mlkLibraryGPSCoord, mlkLibraryGPSCoord));
-    }
-
-  });
-  
-  google.maps.event.addListener(map, 'zoom_changed', function() {
-     if (map.getZoom() < 19) map.setZoom(19);
-   });
-
-  function AlertPos (map, location) { 
-  }
-=======
         map.panTo(mlkLibraryGPSCoord);
     }
 
@@ -131,7 +113,6 @@ $(function() {
 		  map.setZoom(19);
 	  }
   });
->>>>>>> 0c8ee970d55001a38ddb8ca73fa3b8480bfdf98e
 
   floorOverlay = new google.maps.GroundOverlay(
     imageDir + '1-new.PNG',
@@ -149,43 +130,6 @@ function removeOverlay() {
   floorOverlay.setMap(null);
 }
 
-<<<<<<< HEAD
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
-function showlocation(floorNumber, locationName, locationType){
-  var i, iMax;
-  $('#select-native-2').val(floorNumber).selectmenu('refresh');
-  historicalOverlay = new google.maps.GroundOverlay(
-    imageDir + (floorNumber)+ '-new.PNG',
-    imageBounds);
-  historicalOverlay.setMap(map);
-  try{	      
-    for (i = 0, iMax = locations.length; i < iMax; i++) {
-      if ((!locationName || locations[i].name === locationName) && (!locationType || locations[i].type == locationType) && locations[i].floor == floorNumber) {
-        var marker = new google.maps.Marker({animation: google.maps.Animation.DROP,
-          position : new google.maps.LatLng(locations[i].x, locations[i].y),
-          title : "marker",
-          map: map,
-          draggable: false
-        });
-        marker['infoWindow'] = new google.maps.InfoWindow({
-          content: createContent(locations[i]),
-          maxWidth: 200
-        });
-        google.maps.event.addListener(marker, 'click', function() {
-          try {
-            for(var b = 0; b < markers.length; b++) {
-              var currentMarker = markers[b];
-              currentMarker["infoWindow"].close();
-            }} catch(e){}
-            this['infoWindow'].open(map,this);
-          });
-        markers.push(marker);
-      }
-    }
-  }catch(e){}
-=======
 function showFloorLocations(floorNumber, locationName, locationType) {
 	var matchingMarker = null;
 	$('#select-native-2').val(floorNumber).selectmenu('refresh');
@@ -231,7 +175,6 @@ function showFloorLocations(floorNumber, locationName, locationType) {
 		console.log(e);
 	}
 	return matchingMarker;
->>>>>>> 0c8ee970d55001a38ddb8ca73fa3b8480bfdf98e
 }
 
 function showLocation(floorNumber, locationName, locationType){
@@ -268,11 +211,8 @@ $(window).resize(function() {
 	  map.panTo(prevCenter);
   }
   var wHeight = $(window).height();
-<<<<<<< HEAD
-  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-36;
-=======
+
   var mapHeight = wHeight - $('#header').height() - $('#footer').height()-80;
->>>>>>> 0c8ee970d55001a38ddb8ca73fa3b8480bfdf98e
   $('#map-canvas').css('height', mapHeight);
   google.maps.event.trigger(map, "resize");
 
