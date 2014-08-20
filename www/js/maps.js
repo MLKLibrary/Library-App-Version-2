@@ -25,8 +25,22 @@ function clearMap(){
   markers.length=0;
 }
 
+
+function buildMenuList(type) {
+  var i, iMax, listHtml = '';
+  for (i = 0, iMax = locations.length; i < iMax; i++) {
+    if (locations[i].type && locations[i].type === type) {
+      listHtml += '<li data-floor="'+locations[i].floor+'" data-type="'+type+'" data-location="'+locations[i].name+'" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> <a href="#home">'+locations[i].name+' ('+locations[i].floorname+')</a></li>';
+    }
+  }
+  return listHtml;
+}
+
 function initialize() {
   
+  $('#roomMenuList').append(buildMenuList(TYPES.ROOM));
+  $('#collectionMenuList').append(buildMenuList(TYPES.COLLECTION));
+
   $('.pintap').on('click', function() {
     clearMap();
     var $this = $(this);
@@ -46,6 +60,9 @@ function initialize() {
     clearMap();
     showlocation(this.value); // or $(this).val()
   });
+
+
+
   
   /*top : 37.336030, -121.885133 ... max first, 
   left : 37.335486, -121.886340 ... 
@@ -82,15 +99,14 @@ function initialize() {
   google.maps.event.addListener(map,'dragend',function(event) {
     prevCenter = map.center;
     if(!imageBounds.contains(map.center)) {
-      map.panToBounds(imageBounds);
+      map.panToBounds(new google.maps.LatLngBounds(mlkLibraryGPSCoord, mlkLibraryGPSCoord));
     }
 
   });
-  google.maps.event.addListener(map,'center_changed',function(event) {
-    if(!imageBounds.contains(map.center))
-      map.panToBounds(imageBounds);
-  });
   
+  google.maps.event.addListener(map, 'zoom_changed', function() {
+     if (map.getZoom() < 19) map.setZoom(19);
+   });
 
   function AlertPos (map, location) { 
   }
@@ -115,6 +131,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 function showlocation(floorNumber, locationName, locationType){
+  var i, iMax;
   $('#select-native-2').val(floorNumber).selectmenu('refresh');
   historicalOverlay = new google.maps.GroundOverlay(
     imageDir + (floorNumber)+ '-new.PNG',
@@ -156,6 +173,7 @@ function timer(floorNum) {
   }
 }
 
+
 function createContent(location){
   var contentString;
   contentString = '<div id="content">';
@@ -179,7 +197,6 @@ $(window).resize(function() {
   map.setCenter(prevCenter);
   var wHeight = $(window).height();
   var mapHeight = wHeight - $('#header').height() - $('#footer').height()-36;
-  console.log(mapHeight);
   $('#map-canvas').css('height', mapHeight);
   google.maps.event.trigger(map, "resize");
 
