@@ -45,17 +45,13 @@
 	 
     <div data-role="header" id="header">
       <h1>SJSU Library</h1>
-    </div>
-  
-    <div align="center"> 
-      <a href="#popupCloseRight" data-rel="popup" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-inline"></a>
+      <a href="#popupCloseRight" data-rel="popup" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-right"></a>
       <div data-role="popup" id="popupCloseRight" class="ui-content">
         <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
         <p>Tap on a map pin to explore library locations, or search the menu for locations and services.</p>
       </div>
     </div>
-
-
+      
 <!--Floor menu-->
     <select name="select-native-2" id="select-native-2" data-mini="true">
       <option value="-1">Lower Level</option>
@@ -70,7 +66,7 @@
       <option value="8">8th Floor</option>
     </select>
 
-    <div data-role="content">
+    <div id="mapContent" data-role="content">
       <div id="map-canvas">
       </div>
     </div>
