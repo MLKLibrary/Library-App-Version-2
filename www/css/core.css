@@ -30,3 +30,7 @@ a { font-size:9px; }
 	font-family: Helvetica, Verdana, sans-serif
 
 }
+
+#mapContent {
+	padding: 0px;
+}

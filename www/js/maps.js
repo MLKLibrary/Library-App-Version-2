@@ -89,7 +89,7 @@ $(function() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
   var wHeight = $(document).height();
-  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-80;
+  var mapHeight = wHeight - $('#header').height() - $('#select-native-2').closest('.ui-select').height() - $('#footer').height() - 20;
   $("#map-canvas").css("height", mapHeight);
   
   google.maps.event.trigger(map, "resize");
@@ -212,7 +212,7 @@ $(window).resize(function() {
   }
   var wHeight = $(window).height();
 
-  var mapHeight = wHeight - $('#header').height() - $('#footer').height()-80;
+  var mapHeight = wHeight - $('#header').height() - $('#select-native-2').closest('.ui-select').height() - $('#footer').height() - 20;
   $('#map-canvas').css('height', mapHeight);
   google.maps.event.trigger(map, "resize");
 
