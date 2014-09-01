@@ -1,4 +1,1 @@
-hooks
-platforms
-plugins
-.cordova
+platforms/*
