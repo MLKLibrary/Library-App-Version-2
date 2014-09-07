@@ -81,7 +81,7 @@ $(function() {
   */
 
   var mapOptions = {
-    zoom: 20,
+    zoom: 21,
     center: mlkLibraryGPSCoord,
     disableDefaultUI: true
   };
