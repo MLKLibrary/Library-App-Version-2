@@ -1,6 +1,6 @@
 <h3>The easy way</h3>
 <p>
-Use build.phonegap.com.
+Use <a target="_blank" href="https://build.phonegap.com/">Phonegap Build</a>
 </p>
 
 <h3>The hard way</h3>
