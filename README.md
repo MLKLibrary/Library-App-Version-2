@@ -1,3 +1,10 @@
+<h3>The easy way</h3>
+<p>
+Use build.phonegap.com.
+</p>
+
+<h3>The hard way</h3>
+<p>
 Build and install on an Android device
 
 1. get phonegap installed (npm install -g phonegap) and your android sdk set up (http://docs.phonegap.com/en/edge/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
@@ -16,3 +23,4 @@ Once you figure it out, update this README.
 4. phonegap build ios
 5. connect ios device to usb or... lighting or whatever apple is making you buy these days.
 6. phonegap install ios
+</p>
