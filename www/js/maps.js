@@ -130,6 +130,36 @@ function removeOverlay() {
   floorOverlay.setMap(null);
 }
 
+function displayMarker(location) {
+  var locationPosition = new google.maps.LatLng(location.x,
+      location.y)
+  var marker = new google.maps.Marker({
+    animation : google.maps.Animation.DROP,
+    position : locationPosition,
+    title : "marker",
+    map : map,
+    draggable : false
+  });
+  marker['infoWindow'] = new google.maps.InfoWindow({
+    content : createContent(location),
+    maxWidth : 200,
+    disableAutoPan : true
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+    map.panTo(this.getPosition());
+    try {
+      for (var b = 0; b < markers.length; b++) {
+        var currentMarker = markers[b];
+        currentMarker["infoWindow"].close();
+      }
+    } catch (e) {
+    }
+    this['infoWindow'].open(map, this);
+  });
+  markers.push(marker);
+  return marker;
+}
+
 function showFloorLocations(floorNumber, locationName, locationType) {
 	var matchingMarker = null;
 	$('#select-native-2').val(floorNumber).selectmenu('refresh');
@@ -139,36 +169,20 @@ function showFloorLocations(floorNumber, locationName, locationType) {
 	try {
 		for (i = 0, iMax = locations.length; i < iMax; i++) {
 			if (locations[i].floor == floorNumber) {
-				var locationPosition = new google.maps.LatLng(locations[i].x,
-						locations[i].y)
-				var marker = new google.maps.Marker({
-					animation : google.maps.Animation.DROP,
-					position : locationPosition,
-					title : "marker",
-					map : map,
-					draggable : false
-				});
-				marker['infoWindow'] = new google.maps.InfoWindow({
-					content : createContent(locations[i]),
-					maxWidth : 200,
-					disableAutoPan : true
-				});
-				google.maps.event.addListener(marker, 'click', function() {
-					map.panTo(this.getPosition());
-					try {
-						for (var b = 0; b < markers.length; b++) {
-							var currentMarker = markers[b];
-							currentMarker["infoWindow"].close();
-						}
-					} catch (e) {
-					}
-					this['infoWindow'].open(map, this);
-				});
-				markers.push(marker);
-				if ((!locationName || locationName === locations[i].name)
-						&& (!locationType || locationType === locations[i].type)) {
-					matchingMarker = marker;
-				}
+        if (locations[i].type == TYPES.COLLECTION) {
+          if ((locationName && locationName === locations[i].name)
+              && (locationType && locationType === locations[i].type)) {
+            var marker = displayMarker(locations[i]);
+            matchingMarker = marker;
+          }
+        } else {
+          var marker = displayMarker(locations[i]);
+          if ((locationName && locationName === locations[i].name)
+              && (locationType && locationType === locations[i].type)) {
+            matchingMarker = marker;
+          }  
+        }
+				
 			}
 		}
 	} catch (e) {
