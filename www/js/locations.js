@@ -96,15 +96,15 @@ var locations = [
     name: "Restrooms",
     floor: 7,
     floorname: "7th Floor",
-    x: 37.335486, y: 121.884657
+    x: 37.335486, y: -121.884657
   },
 
   {
     type: TYPES.PLACE,
     name: "Restrooms",
     floor: 8,
-    floor: "8th Floor",
-    x: 37.335486, y: 121.884657
+    floorname: "8th Floor",
+    x: 37.335486, y: -121.884657
   },
 
 
