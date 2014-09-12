@@ -303,6 +303,30 @@ var locations = [
   //2nd Floor
     {
       type: TYPES.ROOM,
+      name: "Meeting Room 255/257",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335245, y: -121.884842,
+      desc: "Meeting Room",
+      image: "images/photos/StudyRooms-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
+    
+        {
+      type: TYPES.ROOM,
+      name: "Meeting Room 225/229",
+      floor: 2,
+      floorname: "2nd Floor",
+      x: 37.335127, y: -121.884723,
+      desc: "Meeting Room",
+      image: "images/photos/StudyRooms-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
+    
+    {
+      type: TYPES.ROOM,
       name: "Classroom 213",
       floor: 2,
       floorname: "2nd Floor",
@@ -392,7 +416,19 @@ var locations = [
  
      {
       type: TYPES.ROOM,
-      name: "Study Room 602, 604, 606, 622, 624, 626",
+      name: "Study Rooms 602, 604, 606",
+      floor: 6,
+      floorname: "6th Floor",
+      x: 37.335701, y: -121.885007,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
+      
+       {
+      type: TYPES.ROOM,
+      name: "Study Rooms 622, 624, 626",
       floor: 6,
       floorname: "6th Floor",
       x: 37.335723, y: -121.885126,
@@ -401,18 +437,31 @@ var locations = [
       linkText: "",
       linkTarget: ""
     },
+  
     
-    {
+      {
       type: TYPES.ROOM,
-      name: "Study Room 632, 634, 662, 664",
+      name: "Study Rooms 632, 634",
       floor: 6,
       floorname: "6th Floor",
-      x: 37.335429, y: -121.885341,
+      x: 37.335456, y: -121.885351,
       desc: "The library has several rooms available for group study.",
       image: "images/photos/StudyRooms-small.jpg",
       linkText: "",
       linkTarget: ""
-    },    
+    },   
+       
+    {
+      type: TYPES.ROOM,
+      name: "Study Rooms 662, 664",
+      floor: 6,
+      floorname: "6th Floor",
+      x: 37.335355, y: -121.885300,
+      desc: "The library has several rooms available for group study.",
+      image: "images/photos/StudyRooms-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },  
   
   //7th Floor
     
