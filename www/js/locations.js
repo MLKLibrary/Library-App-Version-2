@@ -18,14 +18,14 @@ var locations = [
     floorname: "1st Floor",
     x: 37.335462, y: -121.885350
   },
-
-  {
-    type: TYPES.PLACE,
-    name: "Restrooms",
-    floor: 1,
-    floorname: "1st Floor",
-    x: 37.335775, y: -121.884975
-  },
+//taking out to remove children's room restrooms
+  //{
+    //type: TYPES.PLACE,
+    //name: "Restrooms",
+    //floor: 1,
+    //floorname: "1st Floor",
+    //x: 37.335775, y: -121.884975
+  //},
 
   {
     type: TYPES.PLACE,
