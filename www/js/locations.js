@@ -292,7 +292,7 @@ var locations = [
       name: "Classroom 125",
       floor: 1,
       floorname: "1st Floor",
-      x: 37.335410, y: -121.884567,
+      x: 37.335166, y: -121.884665,
       desc: "Classroom",
       image: "images/photos/StudyRooms-small.jpg",
       linkText: "",
