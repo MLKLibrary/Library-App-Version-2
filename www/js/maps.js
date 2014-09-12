@@ -176,10 +176,9 @@ function showFloorLocations(floorNumber, locationName, locationType) {
             matchingMarker = marker;
           }
         } else {
-          
+          var marker = displayMarker(locations[i]);
           if ((locationName && locationName === locations[i].name)
               && (locationType && locationType === locations[i].type)) {
-            var marker = displayMarker(locations[i]);
             matchingMarker = marker;
           }  
         }
