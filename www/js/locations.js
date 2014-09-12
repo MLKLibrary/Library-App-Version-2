@@ -119,8 +119,8 @@ var locations = [
     x: 37.335518, y: -121.885094,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linkText: "Learn more about printing in the King Library.",
-    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "",
+    linkTarget: ""
   },
 
   {
@@ -131,8 +131,8 @@ var locations = [
     x: 37.335750, y: -121.885224,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linkText: "Learn more about printing in the King Library.",
-    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "",
+    linkTarget: ""
   },
   
   {
@@ -144,7 +144,7 @@ var locations = [
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
     linkText: "Learn more about printing in the King Library.",
-    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkTarget: ""
   },  
 
   {
@@ -155,8 +155,8 @@ var locations = [
     x: 37.335506, y: -121.885252,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linkText: "Learn more about printing in the King Library.",
-    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "",
+    linkTarget: ""
   },
 
   {
@@ -167,8 +167,8 @@ var locations = [
     x: 37.335375, y: -121.884882,
     desc: "You can print from any library computer, USB, or laptop.",
     image: "images/photos/Printing-small.jpg",
-    linkText: "Learn more about printing in the King Library.",
-    linkTarget: "http://library.sjsu.edu/video/printing-king-library"
+    linkText: "",
+    linkTarget: ""
   },
 
   //Mezzanine
@@ -339,11 +339,11 @@ var locations = [
 
     {
       type: TYPES.ROOM,
-      name: "Meeting Room 224",
+      name: "Study Room 224",
       floor: 2,
       floorname: "2nd Floor",
       x: 37.335684, y: -121.885109,
-      desc: "Meeting Room",
+      desc: "Study Room",
       image: "images/photos/StudyRooms-small.jpg",
       linkText: "",
       linkTarget: ""
@@ -351,7 +351,7 @@ var locations = [
 
     {
       type: TYPES.ROOM,
-      name: "Classroom 226",
+      name: "Study Room 226",
       floor: 2,
       floorname: "2nd Floor",
       x: 37.335713, y: -121.885141,
