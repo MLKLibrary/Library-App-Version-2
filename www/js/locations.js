@@ -414,21 +414,10 @@ var locations = [
   
  //6th Floor
  
-     {
-      type: TYPES.ROOM,
-      name: "Study Rooms 602, 604, 606",
-      floor: 6,
-      floorname: "6th Floor",
-      x: 37.335701, y: -121.885007,
-      desc: "The library has several rooms available for group study.",
-      image: "images/photos/StudyRooms-small.jpg",
-      linkText: "",
-      linkTarget: ""
-    },
       
        {
       type: TYPES.ROOM,
-      name: "Study Rooms 622, 624, 626",
+      name: "Study Rooms 602, 604, 606, 622, 624, 626",
       floor: 6,
       floorname: "6th Floor",
       x: 37.335723, y: -121.885126,
@@ -437,23 +426,10 @@ var locations = [
       linkText: "",
       linkTarget: ""
     },
-  
-    
-      {
-      type: TYPES.ROOM,
-      name: "Study Rooms 632, 634",
-      floor: 6,
-      floorname: "6th Floor",
-      x: 37.335456, y: -121.885351,
-      desc: "The library has several rooms available for group study.",
-      image: "images/photos/StudyRooms-small.jpg",
-      linkText: "",
-      linkTarget: ""
-    },   
        
     {
       type: TYPES.ROOM,
-      name: "Study Rooms 662, 664",
+      name: "Study Rooms  632, 634, 662, 664",
       floor: 6,
       floorname: "6th Floor",
       x: 37.335355, y: -121.885300,
