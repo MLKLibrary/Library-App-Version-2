@@ -958,22 +958,34 @@ var locations = [
 
     {
       type: TYPES.COLLECTION,
-      name: "A-BL",
+      name: "A-BC",
       floor: 6,
       floorname: "6th Floor",
-      x: 37.335466, y: -121.885282,
+      x: 37.335436, y: -121.884765,
       desc: "",
       image: "images/photos/Bookstacks-small.jpg",
       linkText: "",
       linkTarget: ""
     },
 
+{
+      type: TYPES.COLLECTION,
+      name: "BC-BL",
+      floor: 6,
+      floorname: "6th Floor",
+      x: 37.335414, y: -121.884562,
+      desc: "",
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
+    
     {
       type: TYPES.COLLECTION,
       name: "BM-CI",
       floor: 6,
       floorname: "6th Floor",
-      x: 37.335466, y: -121.885282,
+      x: 37.335163, y: -121.884687,
       desc: "",
       image: "images/photos/Bookstacks-small.jpg",
       linkText: "",
@@ -982,22 +994,59 @@ var locations = [
 
     {
       type: TYPES.COLLECTION,
-      name: "CJ-DS",
+      name: "CJ-D",
       floor: 6,
       floorname: "6th Floor",
-      x: 37.335466, y: -121.885282,
+      x: 37.335163, y: -121.884687,
       desc: "",
       image: "images/photos/Bookstacks-small.jpg",
       linkText: "",
       linkTarget: ""
     },
 
+    {
+      type: TYPES.COLLECTION,
+      name: "DA-DS",
+      floor: 6,
+      floorname: "6th Floor",
+      x: 37.335345, y: -121.885026,
+      desc: "",
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
+    
     {
       type: TYPES.COLLECTION,
       name: "DT-E",
       floor: 6,
       floorname: "6th Floor",
-      x: 37.335466, y: -121.885282,
+      x: 37.335438, y: -121.885192,
+      desc: "",
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
+
+
+    {
+      type: TYPES.COLLECTION,
+      name: "F-GV",
+      floor: 6,
+      floorname: "6th Floor",
+      x: 37.335471, y: -121.885291,
+      desc: "",
+      image: "images/photos/Bookstacks-small.jpg",
+      linkText: "",
+      linkTarget: ""
+    },
+    
+    {
+      type: TYPES.COLLECTION,
+      name: "GV-HB",
+      floor: 6,
+      floorname: "6th Floor",
+      x: 37.335527, y: -121.885393,
       desc: "",
       image: "images/photos/Bookstacks-small.jpg",
       linkText: "",
@@ -1006,22 +1055,22 @@ var locations = [
 
     {
       type: TYPES.COLLECTION,
-      name: "F-HB",
+      name: "HC-HD",
       floor: 6,
       floorname: "6th Floor",
-      x: 37.335466, y: -121.885282,
+      x: 37.335775, y: -121.885303, 
       desc: "",
       image: "images/photos/Bookstacks-small.jpg",
       linkText: "",
       linkTarget: ""
     },
-
+    
     {
       type: TYPES.COLLECTION,
-      name: "HC-HM",
+      name: "HD-HO",
       floor: 6,
       floorname: "6th Floor",
-      x: 37.335614, y: -121.885157, 
+      x: 37.335624, y: -121.885120, 
       desc: "",
       image: "images/photos/Bookstacks-small.jpg",
       linkText: "",
