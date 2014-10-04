@@ -141,7 +141,7 @@
           <h3>Circulation Desk</h3>
           <p>The Circulation Desk staff provide assistance with materials checkout, course reserves, library accounts, Link+ and ILL holds, and paying fines. </p>
           <ul data-role="listview" data-theme="d" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="#home" data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-icon-carat-r">Circulation Desk</a></li>
+            <li><a href="#home" data-floor="1" data-type="1" data-location="Circulation Desk" class="pintap ui-btn ui-icon-carat-r">Circulation Desk</a></li>
           </ul>
         </div>
 
@@ -170,9 +170,9 @@
           <h3>Laptops and iPads</h3>
           <p>Student Computing Services provides students free access to PC laptops, MacBooks and iPads. They are located on the 4th floor. You can also check out iPads and laptops on the Mezzanine.</p>
           <ul data-role="listview" data-theme="d" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="#home" data-floor="0" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Check out devices on the Mezzanine.</a>
+            <li><a href="#home" data-floor="0" data-type="1" data-location="Mezzanine" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Check out devices on the Mezzanine.</a>
             </li>
-            <li><a href="#home" data-floor="4" data-location="Student Computing Services - Laptops and iPads" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> Student Computing Services (4th Floor)</a>
+            <li><a href="#home" data-floor="4" data-type="2" data-location="Student Computing Services - Laptops and iPads" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r"> Student Computing Services (4th Floor)</a>
             <li><a class="inAppLink" href="http://library.sjsu.edu/student-computing-services/student-computing-services-center" class="ui-btn ui-mini ui-btn-inline ui-corner-all">More about Student Computing Services on the SJSU Library website.</a>
             </li>
           </ul>  
@@ -183,7 +183,7 @@
           <h3>Library Cards</h3>
           <p>A library card and PIN are needed to borrow items or get access to ebooks and databases. Bring your Tower Card to the Circulation Desk to get a library card.</p>
           <ul data-role="listview" data-theme="d" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="#home" data-floor="1" data-location="Circulation Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Circulation Desk (1st Floor)</a>
+            <li><a href="#home" data-floor="1" data-type="1" data-location="Circulation Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Circulation Desk (1st Floor)</a>
             </li>
             <li><a class="inAppLink" href="https://library.sjsu.edu/borrow-renew-return/get-library-card" class="ui-btn ui-btn-icon-right ui-icon-carat-r">More information on the Library Website.</a>
             </li>
@@ -215,19 +215,19 @@
           <p>Print for $0.20 a page from any library computer, USB, or laptop. <a class="inAppLink" href="http://library.sjsu.edu/print-copy-scan/print-copy-scan">More printing information.</a></p>
           <ul data-role="listview" data-theme="d" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             <li class="ui-first-child">
-                <a href="#home" data-floor="-1" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - Lower Level</a>
+                <a href="#home" data-floor="-1" data-type="2" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - Lower Level</a>
             </li>
             <li>
-                <a href="#home" data-floor="0" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - Mezzanine</a>
+                <a href="#home" data-floor="0" data-type="2" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - Mezzanine</a>
             </li>
             <li>
-                <a href="#home" data-floor="1" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 1st Floor</a>
+                <a href="#home" data-floor="1" data-type="2" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 1st Floor</a>
             </li>
             <li>
-                <a href="#home" data-floor="2" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 2nd Floor</a>
+                <a href="#home" data-floor="2" data-type="2" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 2nd Floor</a>
             </li>
             <li>
-                <a href="#home" data-floor="5" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 5th Floor</a>
+                <a href="#home" data-floor="5" data-type="2" data-location="Printing" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Printing - 5th Floor</a>
             </li>
           </ul>  
         </div>
@@ -238,7 +238,7 @@
           <p>The Reference Desk offers help with library collections and research assistance with assignments.</p>
           <ul data-role="listview" data-theme="d" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
             <li class="ui-first-child">
-                <a href="#home" data-floor="2" data-location="Reference Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a>
+                <a href="#home" data-floor="2" data-type="1" data-location="Reference Desk" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a>
             </li>
           </ul>
         </div>
@@ -258,15 +258,15 @@
           <p>Restrooms are located along the blue wall on each floor of the library.</p>
           <ul data-role="listview" data-theme="d" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
             <li class="ui-first-child">
-            <a href="#home" data-floor="-1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a></li>
-            <li><a href="#home" data-floor="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">1st Floor</a></li>
-            <li><a href="#home" data-floor="2" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a></li>
-            <li><a href="#home" data-floor="3" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
-            <li><a href="#home" data-floor="4" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">4th Floor</a></li>
-            <li><a href="#home" data-floor="5" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">5th Floor</a></li>
-            <li><a href="#home" data-floor="6" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">6th Floor</a></li>
-            <li><a href="#home" data-floor="7" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">7th Floor</a></li>
-            <li><a href="#home" data-floor="8" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">8th Floor</a></li>
+            <a href="#home" data-floor="-1" data-type="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Lower Level</a></li>
+            <li><a href="#home" data-floor="1" data-type="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">1st Floor</a></li>
+            <li><a href="#home" data-floor="2" data-type="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">2nd Floor</a></li>
+            <li><a href="#home" data-floor="3" data-type="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">3rd Floor</a></li>
+            <li><a href="#home" data-floor="4" data-type="1" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">4th Floor</a></li>
+            <li><a href="#home" data-floor="5" data-type="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">5th Floor</a></li>
+            <li><a href="#home" data-floor="6" data-type="1" data-location="Restrooms" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">6th Floor</a></li>
+            <li><a href="#home" data-floor="7" data-type="1" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">7th Floor</a></li>
+            <li><a href="#home" data-floor="8" data-type="1" data-location="Restrooms"  class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">8th Floor</a></li>
           </ul> 
         </div>
 
@@ -274,7 +274,7 @@
           <h3>Technology Training</h3>
           <p> The Student Technology Training Center provides training, workshops and drop-in help with software such as Excel and SPSS.</p>
           <ul data-role="listview" data-theme="d" data-filter="false" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">
-            <li><a href="#home" data-floor="4" data-location="Student Technology Training" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Technology Training Center (4th Floor)</a></li>
+            <li><a href="#home" data-floor="4" data-type="2" data-location="Student Technology Training" class="pintap ui-btn ui-btn-icon-right ui-icon-carat-r">Technology Training Center (4th Floor)</a></li>
             <li><a class="inAppLink" href="http://library.sjsu.edu/student-technology-training-center/student-technology-training-center" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> More information on SJSU Library Website</a>
             </li>
           </ul>
@@ -321,13 +321,6 @@
       <div id="evtsTable">
         <h3>Library Events</h3>
       </div>
-    </div>
-  
-    <div> 
-      <ul> 
-        <li data-role=button ui-corner-all id="toggleEvtsVw" class="table" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all">Event Calendar
-        </li>
-      </ul>
     </div>
   
   <div data-role=popup id='calPopup' data-position-to="origin" class="ui-content">
