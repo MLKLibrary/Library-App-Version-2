@@ -4,7 +4,10 @@ var historicalOverlay;
 var map;
 var mapLoaded = false;
 var prevCenter = null;
-var infoWindow = new google.maps.InfoWindow({});
+var infoWindow = new google.maps.InfoWindow({
+  maxWidth : 200,
+  disableAutoPan : true
+});
 var markers = [];
 var imageBounds = new google.maps.LatLngBounds(new google.maps.LatLng(37.334847, -121.886208), new google.maps.LatLng(37.336027, -121.883861));
 var mlkLibraryGPSCoord = new google.maps.LatLng(37.335438, -121.885036);
@@ -18,10 +21,10 @@ function clearMap(){
   removeOverlay();
   for(var i = 0; i < markers.length; i++) {
     markers[i].setMap(null);
-    try{
-      markers[i]['infoWindow'].close();
-    }catch(e){}
   }
+  try {
+    infoWindow.close();
+  } catch (e) {}
   markers.length=0;
 }
 
@@ -138,7 +141,8 @@ function displayMarker(location) {
     position : locationPosition,
     title : "marker",
     map : map,
-    draggable : false
+    draggable : false,
+    infoWindowContent: createContent(location)
   });
   marker['infoWindow'] = new google.maps.InfoWindow({
     content : createContent(location),
@@ -147,14 +151,8 @@ function displayMarker(location) {
   });
   google.maps.event.addListener(marker, 'click', function() {
     map.panTo(this.getPosition());
-    try {
-      for (var b = 0; b < markers.length; b++) {
-        var currentMarker = markers[b];
-        currentMarker["infoWindow"].close();
-      }
-    } catch (e) {
-    }
-    this['infoWindow'].open(map, this);
+    infoWindow.setContent(this.infoWindowContent);
+    infoWindow.open(map, this);
   });
   markers.push(marker);
   return marker;
@@ -191,11 +189,25 @@ function showFloorLocations(floorNumber, locationName, locationType) {
 	return matchingMarker;
 }
 
-function showLocation(floorNumber, locationName, locationType){
+function showLocation(floorNumber, locationName, locationType) {
 	var marker = showFloorLocations(floorNumber, locationName, locationType);
-	setTimeout(function() {
-		google.maps.event.trigger(marker, 'click');
-	}, 500);
+  /* 
+  * Defer the infowindow opening until after the page transition is complete, otherwise
+  * the infowindow will open blank. 
+  * The page should have been written with tabs instead of separate jquery mobile pages 
+  * and a funky navbar. Note the duplicate element ids on the page.. i.e. header, footer, etc.
+  * You know you're doing it wrong when you have duplicate element ids.
+  * Jquery mobile page container is actually designed to load content from  separate html files
+  * via AJAX, but in this case all the pages are inside a single page. 
+  * Converting everything over to use tabs would have solved the blank infowindow issue, but 
+  * that's a nasty invasive change to make and I don't have time, so I'll use this dirty 
+  * jquery mobile event hack instead. I highly suggest that someone convert to jquery mobile tabs
+  * at some point.
+  */
+  $(document).one('pagecontainershow', function(event,ui) {
+    infoWindow.setContent(marker.infoWindowContent);
+    infoWindow.open(map, marker);
+  });
 }
 
 
