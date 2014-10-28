@@ -1313,7 +1313,7 @@ var locations = [
       name: "Folio F-Z",
       floor: 8,
       floorname: "8th Floor",
-      x: 37.335657, -121.885183,
+      x: 37.335657, y: -121.885183,
       desc: "",
       image: "images/photos/Bookstacks-small.jpg",
       linkText: "",
