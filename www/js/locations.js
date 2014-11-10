@@ -997,7 +997,7 @@ var locations = [
       name: "CJ-D",
       floor: 6,
       floorname: "6th Floor",
-      x: 37.335163, y: -121.884687,
+      x: 37.335296, y: -121.884921,
       desc: "",
       image: "images/photos/Bookstacks-small.jpg",
       linkText: "",
