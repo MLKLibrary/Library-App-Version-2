@@ -22,7 +22,7 @@
     <preference name="android-installLocation" value="auto" />
     <access origin="*" />
     <icon src="images/icon.png" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 
     <gap:splash src="splash/splash-480x320.png"   gap:platform="ios" width="320"  height="480"  /><!-- Regular iPhone4 -->
     <gap:splash src="splash/splash-640x960.png"   gap:platform="ios" width="640"  height="960"  /><!-- Retina iPhone4 -->
